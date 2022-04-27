@@ -11,6 +11,7 @@
       python.path = ./python;
       rust-bin.path = ./rust-bin;
       rust-lib.path = ./rust-lib;
+      stats-course.path = ./stats-course;
     };
 
     defaultTemplate = self.templates.empty;
