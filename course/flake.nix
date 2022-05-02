@@ -15,7 +15,7 @@
   outputs = { self, nixpkgs, utils, taskmatter }:
     utils.lib.eachDefaultSystem (system:
       with import nixpkgs { inherit system; overlays = [ taskmatter.overlay ]; }; {
-        devShell = mkShell {
+        devShells.default = mkShell {
           nativeBuildInputs = [
             nodePackages.cspell
             # TODO: wrap pandoc with defaults

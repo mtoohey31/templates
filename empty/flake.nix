@@ -9,6 +9,6 @@
   outputs = { self, nixpkgs, utils }:
     utils.lib.eachDefaultSystem (system:
       with import nixpkgs { inherit system; }; {
-        devShell = mkShell { nativeBuildInputs = [ ]; };
+        devShells.default = mkShell { nativeBuildInputs = [ ]; };
       });
 }

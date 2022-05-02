@@ -14,13 +14,17 @@
         overlays = [ poetry2nix.overlay ];
       }; in
       with pkgs; rec {
-        packages.CHANGEME = pkgs.poetry2nix.mkPoetryApplication {
+        packages.default = pkgs.poetry2nix.mkPoetryApplication {
           projectDir = ./.;
         };
-        defaultPackage = packages.CHANGEME;
 
-        devShell = pkgs.poetry2nix.mkPoetryEnv {
+        devShells.default = pkgs.poetry2nix.mkPoetryEnv {
           projectDir = ./.;
         };
-      });
+      }) // {
+      overlays.default = nixpkgs.lib.composeManyExtensions [
+        poetry2nix.overlay
+        (final: _: { CHANGEME = self.packages."${final.system}".default; })
+      ];
+    };
 }

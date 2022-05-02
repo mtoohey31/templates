@@ -23,21 +23,21 @@
           channel = "nightly";
           sha256 = "LE515NwqEieN9jVZcpkGGmd5VLXTix3TTUNiXb01sJM=";
         };
+        inherit (rustChannel) rust;
         naersk-lib = naersk.lib."${system}".override {
-          cargo = rustChannel.rust;
-          rustc = rustChannel.rust;
+          cargo = rust;
+          rustc = rust;
         };
       in
       rec {
-        packages.CHANGEME = naersk-lib.buildPackage {
+        packages.default = naersk-lib.buildPackage {
           pname = "CHANGEME";
           root = ./.;
         };
-        defaultPackage = packages.CHANGEME;
 
-        devShell = pkgs.mkShell {
+        devShells.default = pkgs.mkShell {
           nativeBuildInputs = [
-            rustChannel.rust
+            rust
             pkgs.rust-analyzer
           ];
           shellHook = ''

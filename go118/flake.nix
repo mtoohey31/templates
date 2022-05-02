@@ -9,16 +9,17 @@
   outputs = { self, nixpkgs, utils }:
     utils.lib.eachDefaultSystem (system:
         with import nixpkgs { inherit system; }; rec {
-          packages.CHANGEME = buildGo118Module rec {
+          packages.default = buildGo118Module rec {
             name = "CHANGEME";
             pname = name;
             src = ./.;
             vendorSha256 = "";
           };
-          defaultPackage = packages.CHANGEME;
 
-          devShell = mkShell { nativeBuildInputs = [ go_1_18 gopls ]; };
+          devShells.default = mkShell { nativeBuildInputs = [ go_1_18 gopls ]; };
         }) // {
-      overlay = (final: prev: { CHANGEME = self.defaultPackage."${prev.system}"; });
+      overlays.default = (final: _: {
+        CHANGEME = self.packages."${final.system}".default;
+      });
     };
 }

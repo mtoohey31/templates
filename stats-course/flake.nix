@@ -33,7 +33,7 @@
             taskmatter.overlay
           ];
         }; {
-        devShell = mkShell {
+        devShells.default = mkShell {
           nativeBuildInputs = [
             nodePackages.cspell
             pandoc
