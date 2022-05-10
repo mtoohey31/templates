@@ -39,7 +39,11 @@
             pandoc
             (symlinkJoin (
               let rWrapper = pkgs.rWrapper.override {
-                packages = with rPackages; [ rPackages.colorout ggplot2 ];
+                packages = with rPackages; [
+                  rPackages.colorout
+                  ggplot2
+                  languageserver
+                ];
               }; in
               {
                 name = rWrapper.name + "-wrapper";
