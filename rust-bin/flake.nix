@@ -36,7 +36,7 @@
         };
 
         devShells.default = pkgs.mkShell {
-          nativeBuildInputs = [
+          packages = [
             rust
             pkgs.rust-analyzer
           ];

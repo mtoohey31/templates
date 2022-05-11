@@ -16,7 +16,7 @@
             vendorSha256 = "";
           };
 
-          devShells.default = mkShell { nativeBuildInputs = [ go_1_18 gopls ]; };
+          devShells.default = mkShell { packages = [ go_1_18 gopls ]; };
         }) // {
       overlays.default = (final: _: {
         CHANGEME = self.packages."${final.system}".default;

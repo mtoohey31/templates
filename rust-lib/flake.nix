@@ -22,7 +22,7 @@
       in
       rec {
         devShells.default = pkgs.mkShell {
-          nativeBuildInputs = [
+          packages = [
             rustChannel.rust
             pkgs.rust-analyzer
           ];

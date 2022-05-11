@@ -34,7 +34,7 @@
           ];
         }; {
         devShells.default = mkShell {
-          nativeBuildInputs = [
+          packages = [
             nodePackages.cspell
             pandoc
             (symlinkJoin (

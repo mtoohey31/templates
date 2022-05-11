@@ -16,7 +16,7 @@
     utils.lib.eachDefaultSystem (system:
       with import nixpkgs { inherit system; overlays = [ taskmatter.overlay ]; }; {
         devShells.default = mkShell {
-          nativeBuildInputs = [
+          packages = [
             nodePackages.cspell
             # TODO: wrap pandoc with defaults
             pandoc
