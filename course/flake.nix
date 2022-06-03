@@ -14,7 +14,12 @@
   # TODO: figure out how to add lf cards keybind
   outputs = { self, nixpkgs, utils, taskmatter }:
     utils.lib.eachDefaultSystem (system:
-      with import nixpkgs { inherit system; overlays = [ taskmatter.overlay ]; }; {
+      with import nixpkgs
+        {
+          inherit system; overlays = [
+          taskmatter.overlays.default
+        ];
+        }; {
         devShells.default = mkShell {
           packages = [
             nodePackages.cspell

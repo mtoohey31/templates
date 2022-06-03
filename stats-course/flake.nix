@@ -30,7 +30,7 @@
                 };
               };
             })
-            taskmatter.overlay
+            taskmatter.overlays.default
           ];
         }; {
         devShells.default = mkShell {
