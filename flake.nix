@@ -1,9 +1,9 @@
 {
   description = "My Nix flake templates";
-  
+
   outputs = { self }: {
     templates = rec {
-      course.description = "A flake for my university courses with cspell spellcheck, taskmatter for task management, and pandoc and latex PDF documents.";
+      course.description = "A flake for my university courses with cspell spellcheck, taskmatter for task management, and pandoc and latex for PDF documents.";
       course.path = ./course;
       stats-course.description = "An extended version of the course flake that includes R and the R packages I use frequently.";
       stats-course.path = ./stats-course;
