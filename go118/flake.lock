@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "gow-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1653989095,
+        "narHash": "sha256-rwFV33e3CL7lkljfISB9QZPchEXOYI5n3IcRorFsGWs=",
+        "owner": "mitranim",
+        "repo": "gow",
+        "rev": "17fe765b1be5a400c6c6098895e0c8b965d3fe2c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mitranim",
+        "repo": "gow",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1654126564,
@@ -17,6 +33,7 @@
     },
     "root": {
       "inputs": {
+        "gow-src": "gow-src",
         "nixpkgs": "nixpkgs",
         "utils": "utils"
       }
