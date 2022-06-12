@@ -36,9 +36,11 @@
         };
 
         devShells.default = pkgs.mkShell {
-          packages = [
-            rust
-            pkgs.rust-analyzer
+          packages = with pkgs; [
+            cargo-watch
+            rustChannel.rust
+            rustfmt
+            rust-analyzer
           ];
           shellHook = ''
             export RUST_SRC_PATH="${rustChannel.rust-src}/lib/rustlib/src/rust/library"

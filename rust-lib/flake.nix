@@ -22,9 +22,11 @@
       in
       rec {
         devShells.default = pkgs.mkShell {
-          packages = [
+          packages = with pkgs; [
+            cargo-watch
             rustChannel.rust
-            pkgs.rust-analyzer
+            rustfmt
+            rust-analyzer
           ];
           shellHook = ''
             export RUST_SRC_PATH="${rustChannel.rust-src}/lib/rustlib/src/rust/library"
