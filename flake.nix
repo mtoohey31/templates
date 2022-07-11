@@ -9,6 +9,14 @@
       url = "github:mitranim/gow";
       flake = false;
     };
+    idris2-pkgs = {
+      url = "github:claymager/idris2-pkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "utils";
+        idris-server.follows = "";
+      };
+    };
     naersk = {
       url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,6 +42,13 @@
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
         gow-src.follows = "gow-src";
+      };
+    };
+    idris = {
+      url = "./idris";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
       };
     };
     python = {
@@ -63,11 +78,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, utils, go, go118, python, rust-bin, rust-lib, ... }:
+  outputs = { self, nixpkgs, utils, go, go118, idris, python, rust-bin, rust-lib, ... }:
     utils.lib.eachDefaultSystem
       (system: with import nixpkgs { inherit system; }; {
         devShells = builtins.mapAttrs (_: value: value.devShells.${system}.default) {
-          inherit go go118 python rust-bin rust-lib;
+          inherit go go118 idris python rust-bin rust-lib;
         };
       }) // {
       templates = rec {
@@ -79,12 +94,15 @@
         empty.description = "An empty flake to be used as a starting point for creating new templates.";
         empty.path = ./empty;
 
+        # TODO: add go+container template
         go.description = "A flake for building Go binaries with the stable version of the Go language.";
         go.path = ./go;
         go118.description = "A flake for building Go binaries with version 1.18 of the Go language.";
         go118.path = ./go118;
 
-        # TODO: add go+container template
+        idris.description = "A flake for building idris executables or libraries.";
+        idris.path = ./idris;
+
         python.description = "A flake for python programs that pins dependencies using poetry.";
         python.path = ./python;
 
