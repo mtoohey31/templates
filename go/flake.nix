@@ -35,7 +35,7 @@
         devShells.default = mkShell { packages = [ go gopls gow ]; };
       }) // {
       overlays.default = (final: _: {
-        CHANGEME = self.packages."${final.system}".default;
+        CHANGEME = self.packages.${final.system}.default;
       });
     };
 }

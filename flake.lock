@@ -15,11 +15,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-4THLrKcrxRNq5yZBu7uIQGkKiKSfxjcoEUrC6H4ON00=",
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/go",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/go",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/go",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/go",
         "type": "path"
       }
     },
@@ -38,11 +38,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-a9mj0NvjbKZUUYQTI7XJfnvo9iLgacly3kNfvO45T5M=",
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/go118",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/go118",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/go118",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/go118",
         "type": "path"
       }
     },
@@ -150,11 +150,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-tG9MJoARoi75uiOL7RGwxXmm/TCGJ72kJEeSLuIfe/I=",
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/python",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/python",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/python",
         "type": "path"
       }
     },
@@ -191,11 +191,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-VjSOu8vV7Q8+ZsWfo7Fp5rCkdGm3/4iX4HDUdanukSk=",
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/rust-bin",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/rust-bin",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/rust-bin",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/rust-bin",
         "type": "path"
       }
     },
@@ -214,11 +214,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-kWxamsPIOI4iNoUcISkHQZE2TGdKXUKDjLABWK8xNn8=",
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/rust-lib",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/rust-lib",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/sfa971d2nzihf8cybfhqk6lmmy4lpn8v-source/rust-lib",
+        "path": "/nix/store/40iz853xy2x58ni5rmni6j8gnxzg62kb-source/rust-lib",
         "type": "path"
       }
     },

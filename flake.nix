@@ -66,7 +66,7 @@
   outputs = { self, nixpkgs, utils, go, go118, python, rust-bin, rust-lib, ... }:
     utils.lib.eachDefaultSystem
       (system: with import nixpkgs { inherit system; }; {
-        devShells = builtins.mapAttrs (_: value: value.devShells."${system}".default) {
+        devShells = builtins.mapAttrs (_: value: value.devShells.${system}.default) {
           inherit go go118 python rust-bin rust-lib;
         };
       }) // {

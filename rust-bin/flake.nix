@@ -24,7 +24,7 @@
           sha256 = "LE515NwqEieN9jVZcpkGGmd5VLXTix3TTUNiXb01sJM=";
         };
         inherit (rustChannel) rust;
-        naersk-lib = naersk.lib."${system}".override {
+        naersk-lib = naersk.lib.${system}.override {
           cargo = rust;
           rustc = rust;
         };

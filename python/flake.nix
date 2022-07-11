@@ -36,7 +36,7 @@
         }) // {
       overlays.default = nixpkgs.lib.composeManyExtensions [
         poetry2nix.overlay
-        (final: _: { CHANGEME = self.packages."${final.system}".default; })
+        (final: _: { CHANGEME = self.packages.${final.system}.default; })
       ];
     };
 }
