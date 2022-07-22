@@ -49,6 +49,7 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
+        idris2-pkgs.follows = "idris2-pkgs";
       };
     };
     python = {
