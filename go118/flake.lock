@@ -35,7 +35,8 @@
       "inputs": {
         "gow-src": "gow-src",
         "nixpkgs": "nixpkgs",
-        "utils": "utils"
+        "utils": "utils",
+        "yaegi-src": "yaegi-src"
       }
     },
     "utils": {
@@ -50,6 +51,22 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "yaegi-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1658329808,
+        "narHash": "sha256-CC35jTCyFuXhD5jNm9WT70hfA/DxCU+sUbF1EcqhP24=",
+        "owner": "traefik",
+        "repo": "yaegi",
+        "rev": "dc082b5deddba7a7820c4b4143d8a5415aae628e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "traefik",
+        "repo": "yaegi",
         "type": "github"
       }
     }

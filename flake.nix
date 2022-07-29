@@ -27,6 +27,10 @@
       inputs.flake-utils.follows = "utils";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    yaegi-src = {
+      url = "github:traefik/yaegi";
+      flake = false;
+    };
 
     go = {
       url = "./go";
@@ -34,6 +38,7 @@
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
         gow-src.follows = "gow-src";
+        yaegi-src.follows = "yaegi-src";
       };
     };
     go118 = {
@@ -42,6 +47,7 @@
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
         gow-src.follows = "gow-src";
+        yaegi-src.follows = "yaegi-src";
       };
     };
     idris = {
