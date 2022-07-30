@@ -21,7 +21,6 @@
       url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs-mozilla.url = "github:mozilla/nixpkgs-mozilla";
     poetry2nix = {
       url = "github:nix-community/poetry2nix";
       inputs.flake-utils.follows = "utils";
@@ -72,7 +71,6 @@
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
         naersk.follows = "naersk";
-        nixpkgs-mozilla.follows = "nixpkgs-mozilla";
       };
     };
     rust-lib = {
@@ -80,7 +78,6 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
-        nixpkgs-mozilla.follows = "nixpkgs-mozilla";
       };
     };
   };
