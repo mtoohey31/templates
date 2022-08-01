@@ -40,15 +40,6 @@
         yaegi-src.follows = "yaegi-src";
       };
     };
-    go118 = {
-      url = "./go118";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-        gow-src.follows = "gow-src";
-        yaegi-src.follows = "yaegi-src";
-      };
-    };
     idris = {
       url = "./idris";
       inputs = {
@@ -82,11 +73,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, utils, go, go118, idris, python, rust-bin, rust-lib, ... }:
+  outputs = { self, nixpkgs, utils, go, idris, python, rust-bin, rust-lib, ... }:
     utils.lib.eachDefaultSystem
       (system: with import nixpkgs { inherit system; }; {
         devShells = builtins.mapAttrs (_: value: value.devShells.${system}.default) {
-          inherit go go118 idris python rust-bin rust-lib;
+          inherit go idris python rust-bin rust-lib;
         };
       }) // {
       templates = rec {
@@ -101,8 +92,6 @@
         # TODO: add go+container template
         go.description = "A flake for building Go binaries with the stable version of the Go language.";
         go.path = ./go;
-        go118.description = "A flake for building Go binaries with version 1.18 of the Go language.";
-        go118.path = ./go118;
 
         idris.description = "A flake for building idris executables or libraries.";
         idris.path = ./idris;
