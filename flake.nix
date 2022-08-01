@@ -21,11 +21,6 @@
       url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    poetry2nix = {
-      url = "github:nix-community/poetry2nix";
-      inputs.flake-utils.follows = "utils";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     yaegi-src = {
       url = "github:traefik/yaegi";
       flake = false;
@@ -53,31 +48,23 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
-        poetry2nix.follows = "poetry2nix";
       };
     };
-    rust-bin = {
-      url = "./rust-bin";
+    rust = {
+      url = "./rust";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
         naersk.follows = "naersk";
       };
     };
-    rust-lib = {
-      url = "./rust-lib";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
-    };
   };
 
-  outputs = { self, nixpkgs, utils, go, idris, python, rust-bin, rust-lib, ... }:
+  outputs = { self, nixpkgs, utils, go, idris, python, rust, ... }:
     utils.lib.eachDefaultSystem
       (system: with import nixpkgs { inherit system; }; {
         devShells = builtins.mapAttrs (_: value: value.devShells.${system}.default) {
-          inherit go idris python rust-bin rust-lib;
+          inherit go idris python rust;
         };
       }) // {
       templates = rec {
@@ -99,10 +86,8 @@
         python.description = "A flake for python programs that pins dependencies using poetry.";
         python.path = ./python;
 
-        rust-bin.description = "A flake for rust binaries.";
-        rust-bin.path = ./rust-bin;
-        rust-lib.description = "A flake for rust libraries.";
-        rust-lib.path = ./rust-lib;
+        rust.description = "A flake for rust executables or libraries.";
+        rust.path = ./rust-bin;
 
         default = empty;
       };

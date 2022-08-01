@@ -161,12 +161,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-7BGso1bLZzoxa3/PKOWFu72OisgWeuMFDwzCqmakCIo=",
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/go",
+        "narHash": "sha256-Uj/Dixhmea22IiaGGpSOsmZebdZd8LEMgStypBjqEMo=",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/go",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/go",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/go",
         "type": "path"
       }
     },
@@ -249,12 +249,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-sKbt/gMGolcbfFzp7AJNsSnb5xBHg79BTKz/O1u0ug0=",
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/idris",
+        "narHash": "sha256-F+tuGLm81KDnN7/GGYydfUGuHyqLYs3f4D/iIRchpAM=",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/idris",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/idris",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/idris",
         "type": "path"
       }
     },
@@ -473,29 +473,6 @@
         "type": "github"
       }
     },
-    "poetry2nix": {
-      "inputs": {
-        "flake-utils": [
-          "utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1658665240,
-        "narHash": "sha256-/wkx7D7enyBPRjIkK0w7QxLQhzEkb3UxNQnjyc3FTUI=",
-        "owner": "nix-community",
-        "repo": "poetry2nix",
-        "rev": "8b8edc85d24661d5a6d0d71d6a7011f3e699780f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "poetry2nix",
-        "type": "github"
-      }
-    },
     "pretty-show": {
       "flake": false,
       "locked": {
@@ -533,21 +510,18 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "poetry2nix": [
-          "poetry2nix"
-        ],
         "utils": [
           "utils"
         ]
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-6doN0DnUQrqH8q29DD6iapwZEEZrvg3mxUsRT9S42cw=",
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/python",
+        "narHash": "sha256-8kWUjQ35jXGrUe6QpwuKH1GjRavxyhnshY6rYq24eW0=",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/python",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/python",
         "type": "path"
       }
     },
@@ -591,7 +565,6 @@
         "idris2-pkgs": "idris2-pkgs",
         "naersk": "naersk",
         "nixpkgs": "nixpkgs",
-        "poetry2nix": "poetry2nix",
         "python": "python_2",
         "rust-bin": "rust-bin",
         "rust-lib": "rust-lib",
@@ -613,12 +586,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-JpWSfh2aEu+8ffHmHnt4CJUg8bkTDQHY1fvjn2oyUto=",
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/rust-bin",
+        "narHash": "sha256-HMyWusG8EuC+iH72mZIkFzDnX9f0NBpri4QP4UaOhBQ=",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/rust-bin",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/rust-bin",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/rust-bin",
         "type": "path"
       }
     },
@@ -634,11 +607,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-Gk6vAbdzBVvOQhB69u0TLQZekWrGHTrnQhFE94DuUqo=",
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/rust-lib",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/rust-lib",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/5w1m4zqgkp4avqhrz9ay83w3j6jhywlm-source/rust-lib",
+        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/rust-lib",
         "type": "path"
       }
     },

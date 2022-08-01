@@ -14,27 +14,32 @@
     };
   };
 
-  outputs = { self, nixpkgs, utils, idris2-pkgs }:
-    utils.lib.eachDefaultSystem
-      (system:
-        let
-          pkgs = import nixpkgs
-            {
-              overlays = [ idris2-pkgs.overlay ];
-              inherit system;
-            };
-          inherit (pkgs.idris2-pkgs._builders) idrisPackage devEnv;
-        in
-        rec {
-          packages.default = idrisPackage ./. { };
+  outputs = { self, nixpkgs, utils, idris2-pkgs }: {
+    overlays = rec {
+      expects-idris2-pkgs = final: _: {
+        CHANGEME = final.idris2-pkgs._builders.idrisPackage ./. { };
+      };
 
-          devShells.default = pkgs.mkShell {
-            packages = [ (devEnv packages.default) ];
-          };
-        }
-      ) // {
-      overlays.default = (final: _: {
-        CHANGEME = self.packages.${final.system}.default;
-      });
+      default = final: prev: {
+        inherit (prev.appendOverlays [
+          idris2-pkgs.overlay
+          expects-idris2-pkgs
+        ]) CHANGEME;
+      };
     };
+  } // utils.lib.eachDefaultSystem (system:
+    let
+      pkgs = import nixpkgs {
+        overlays = [ idris2-pkgs.overlay self.overlays.expects-idris2-pkgs ];
+        inherit system;
+      };
+      inherit (pkgs.idris2-pkgs._builders) devEnv;
+    in
+    with pkgs; {
+      packages.default = CHANGEME;
+
+      devShells.default = mkShell {
+        packages = [ (devEnv CHANGEME) ];
+      };
+    });
 }
