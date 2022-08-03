@@ -161,12 +161,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-Uj/Dixhmea22IiaGGpSOsmZebdZd8LEMgStypBjqEMo=",
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/go",
+        "narHash": "sha256-hE8jKmf+sV1WybiwuYaQuktdaOsuItK476g7dHSwX3U=",
+        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/golang",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/go",
+        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/golang",
         "type": "path"
       }
     },
@@ -249,12 +249,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-F+tuGLm81KDnN7/GGYydfUGuHyqLYs3f4D/iIRchpAM=",
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/idris",
+        "narHash": "sha256-zJKTAJUSq1YMZjoieJGxoSgFq94fXT2TB+6qhToC6mQ=",
+        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/idris",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/idris",
+        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/idris",
         "type": "path"
       }
     },
@@ -516,12 +516,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-8kWUjQ35jXGrUe6QpwuKH1GjRavxyhnshY6rYq24eW0=",
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/python",
+        "narHash": "sha256-7bOLoRIBi/inFlDMgm97acaa1iA7bKrU8Th4AtbAOYQ=",
+        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/python",
+        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/python",
         "type": "path"
       }
     },
@@ -566,13 +566,12 @@
         "naersk": "naersk",
         "nixpkgs": "nixpkgs",
         "python": "python_2",
-        "rust-bin": "rust-bin",
-        "rust-lib": "rust-lib",
+        "rust": "rust",
         "utils": "utils",
         "yaegi-src": "yaegi-src"
       }
     },
-    "rust-bin": {
+    "rust": {
       "inputs": {
         "naersk": [
           "naersk"
@@ -586,32 +585,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-HMyWusG8EuC+iH72mZIkFzDnX9f0NBpri4QP4UaOhBQ=",
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/rust-bin",
+        "narHash": "sha256-hiWGXNBsBXRuDlE4m7qhBz8a8iCQn3TcBD3V/R1slpQ=",
+        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/rust",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/rust-bin",
-        "type": "path"
-      }
-    },
-    "rust-lib": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "utils": [
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-Gk6vAbdzBVvOQhB69u0TLQZekWrGHTrnQhFE94DuUqo=",
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/rust-lib",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/bnbzs84vghrcrjzf0389974880n1lxrp-source/rust-lib",
+        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/rust",
         "type": "path"
       }
     },

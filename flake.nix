@@ -27,7 +27,7 @@
     };
 
     go = {
-      url = "./go";
+      url = "./golang";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
@@ -76,17 +76,16 @@
         empty.description = "An empty flake to be used as a starting point for creating new templates.";
         empty.path = ./empty;
 
-        # TODO: add go+container template
-        go.description = "A flake for building Go binaries with the stable version of the Go language.";
-        go.path = ./go;
+        go.description = "A flake for Go projects.";
+        go.path = ./golang; # named differently so the build doesn't fail
 
-        idris.description = "A flake for building idris executables or libraries.";
+        idris.description = "A flake for Idris projects.";
         idris.path = ./idris;
 
-        python.description = "A flake for python programs that pins dependencies using poetry.";
+        python.description = "A flake for Python projects.";
         python.path = ./python;
 
-        rust.description = "A flake for rust executables or libraries.";
+        rust.description = "A flake for Rust projects.";
         rust.path = ./rust-bin;
 
         default = empty;

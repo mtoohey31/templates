@@ -16,12 +16,12 @@ version = 0.1.0
 -- modules =
 
 -- main file (i.e. file to load at REPL)
--- main =
+main = CHANGEME.Main
 
 -- name of executable
--- executable =
+executable = CHANGEME
 -- opts =
--- sourcedir =
+sourcedir = "src"
 -- builddir =
 -- outputdir =
 

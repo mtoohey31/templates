@@ -20,14 +20,14 @@
         name = "CHANGEME";
         pname = name;
         src = ./.;
-        vendorSha256 = "";
+        vendorSha256 = null;
       };
     };
   } // utils.lib.eachDefaultSystem (system: with import nixpkgs
     {
       overlays = [
         (final: prev: {
-          gow = final.buildGo118Module rec {
+          gow = final.buildGoModule rec {
             pname = "gow";
             version = "0.1.0";
             src = gow-src;
@@ -35,7 +35,7 @@
           };
           yaegi-rlwrapped =
             let
-              yaegi = final.buildGo118Module rec {
+              yaegi = final.buildGoModule rec {
                 pname = "yaegi-rlwrapped";
                 version = yaegi-src.shortRev;
                 src = yaegi-src;
