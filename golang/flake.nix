@@ -53,7 +53,7 @@
     packages.default = CHANGEME;
 
     devShells.default = mkShell {
-      packages = [ go gopls gow yaegi-rlwrapped ];
+      packages = [ go gopls gow revive yaegi-rlwrapped ];
     };
   });
 }
