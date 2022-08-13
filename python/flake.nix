@@ -28,10 +28,7 @@
         nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [
           poetry
           python3
-          (python3Packages.python-lsp-server.overrideAttrs (_: {
-            # TODO: remove this once https://github.com/NixOS/nixpkgs/pull/183862 is merged
-            doInstallCheck = false;
-          }))
+          python3Packages.python-lsp-server
         ];
       });
     });

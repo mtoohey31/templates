@@ -161,12 +161,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-hE8jKmf+sV1WybiwuYaQuktdaOsuItK476g7dHSwX3U=",
-        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/golang",
+        "narHash": "sha256-W+OJ0/sRi4i7NoKE+n84tyeeYEwLhp1B8yu00q6epm0=",
+        "path": "/nix/store/8knfpz2i6ffgqf2ljk298b71afvfb2xm-source/golang",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/golang",
+        "path": "/nix/store/8knfpz2i6ffgqf2ljk298b71afvfb2xm-source/golang",
         "type": "path"
       }
     },
@@ -250,11 +250,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-zJKTAJUSq1YMZjoieJGxoSgFq94fXT2TB+6qhToC6mQ=",
-        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/idris",
+        "path": "/nix/store/8knfpz2i6ffgqf2ljk298b71afvfb2xm-source/idris",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/idris",
+        "path": "/nix/store/8knfpz2i6ffgqf2ljk298b71afvfb2xm-source/idris",
         "type": "path"
       }
     },
@@ -429,11 +429,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1655042882,
-        "narHash": "sha256-9BX8Fuez5YJlN7cdPO63InoyBy7dm3VlJkkmTt6fS1A=",
+        "lastModified": 1659610603,
+        "narHash": "sha256-LYgASYSPYo7O71WfeUOaEUzYfzuXm8c8eavJcel+pfI=",
         "owner": "nix-community",
         "repo": "naersk",
-        "rev": "cddffb5aa211f50c4b8750adbec0bbbdfb26bb9f",
+        "rev": "c6a45e4277fa58abd524681466d3450f896dc094",
         "type": "github"
       },
       "original": {
@@ -444,11 +444,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1659102345,
-        "narHash": "sha256-Vbzlz254EMZvn28BhpN8JOi5EuKqnHZ3ujFYgFcSGvk=",
+        "lastModified": 1660316542,
+        "narHash": "sha256-wkFzAa5tEzp14OldtpqBHeMTNLGEJemMBfUWaXjJVOE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "11b60e4f80d87794a2a4a8a256391b37c59a1ea7",
+        "rev": "ff8e8d4b4f7c934e16546beefce9e547b6b65d5c",
         "type": "github"
       },
       "original": {
@@ -517,11 +517,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-7bOLoRIBi/inFlDMgm97acaa1iA7bKrU8Th4AtbAOYQ=",
-        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/python",
+        "path": "/nix/store/8knfpz2i6ffgqf2ljk298b71afvfb2xm-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/python",
+        "path": "/nix/store/8knfpz2i6ffgqf2ljk298b71afvfb2xm-source/python",
         "type": "path"
       }
     },
@@ -586,11 +586,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-hiWGXNBsBXRuDlE4m7qhBz8a8iCQn3TcBD3V/R1slpQ=",
-        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/rust",
+        "path": "/nix/store/8knfpz2i6ffgqf2ljk298b71afvfb2xm-source/rust",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/zy3b5gkfq594df3ij7rgs8imhh55h602-source/rust",
+        "path": "/nix/store/8knfpz2i6ffgqf2ljk298b71afvfb2xm-source/rust",
         "type": "path"
       }
     },
@@ -644,11 +644,11 @@
     },
     "utils": {
       "locked": {
-        "lastModified": 1656928814,
-        "narHash": "sha256-RIFfgBuKz6Hp89yRr7+NR5tzIAbn52h8vT6vXkYjZoM=",
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "7e2a3b3dfd9af950a856d66b0a7d01e3c18aa249",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
         "type": "github"
       },
       "original": {
@@ -676,11 +676,11 @@
     "yaegi-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1658329808,
-        "narHash": "sha256-CC35jTCyFuXhD5jNm9WT70hfA/DxCU+sUbF1EcqhP24=",
+        "lastModified": 1660140608,
+        "narHash": "sha256-REXaaS3H+HFxGPQ2Y8uvxId5/mdbY2yK3IdWMZZq7xU=",
         "owner": "traefik",
         "repo": "yaegi",
-        "rev": "dc082b5deddba7a7820c4b4143d8a5415aae628e",
+        "rev": "b2aa636ea0d6a66d933511694072a2b624c0d6e3",
         "type": "github"
       },
       "original": {
