@@ -9,7 +9,7 @@
   outputs = { self, nixpkgs, utils }: {
     overlays.default = final: _: {
       CHANGEME = final.stdenv.mkDerivation {
-        pname = "CHANGME";
+        pname = "CHANGEME";
         version = "0.1.0";
         src = ./.;
       };
