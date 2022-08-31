@@ -86,7 +86,7 @@
         python.path = ./python;
 
         rust.description = "A flake for Rust projects.";
-        rust.path = ./rust-bin;
+        rust.path = ./rust;
 
         default = empty;
       };
