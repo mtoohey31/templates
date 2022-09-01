@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     utils.url = "github:numtide/flake-utils";
-    colorout = {
+    colorout-src = {
       url = "github:jalvesaq/colorout";
       flake = false;
     };
@@ -15,7 +15,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, utils, colorout, taskmatter }:
+  outputs = { self, nixpkgs, utils, colorout-src, taskmatter }:
     utils.lib.eachDefaultSystem (system:
       with import nixpkgs
         {
@@ -26,7 +26,8 @@
                 # TODO: create nixpkgs PR for this
                 colorout = super.rPackages.buildRPackage {
                   name = "colorout";
-                  src = colorout;
+                  src = colorout-src;
+                  version = colorout-src.shortRev;
                 };
               };
             })
@@ -37,25 +38,20 @@
           packages = [
             nodePackages.cspell
             pandoc
-            (symlinkJoin (
-              let rWrapper = pkgs.rWrapper.override {
+            ((
+              pkgs.rWrapper.override {
                 packages = with rPackages; [
-                  rPackages.colorout
+                  colorout
                   ggplot2
                   languageserver
                 ];
-              }; in
-              {
-                name = rWrapper.name + "-wrapper";
-                paths = [ rWrapper ];
-                buildInputs = [ pkgs.makeWrapper ];
-                postBuild = ''
-                  wrapProgram $out/bin/R \
-                    --add-flags "--quiet" \
-                    --add-flags "--save"
-                '';
-              }
-            ))
+              }).overrideAttrs (oldAttrs: {
+              buildCommand = oldAttrs.buildCommand + ''
+                wrapProgram $out/bin/R \
+                  --add-flags "--quiet" \
+                  --add-flags "--save"
+              '';
+            }))
             pkgs.taskmatter
             (pkgs.texlive.combine {
               inherit (pkgs.texlive) scheme-small mdframed needspace zref;

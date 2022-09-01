@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "colorout": {
+    "colorout-src": {
       "flake": false,
       "locked": {
         "lastModified": 1617199358,
@@ -33,7 +33,7 @@
     },
     "root": {
       "inputs": {
-        "colorout": "colorout",
+        "colorout-src": "colorout-src",
         "nixpkgs": "nixpkgs",
         "taskmatter": "taskmatter",
         "utils": "utils_2"
