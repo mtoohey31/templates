@@ -10,8 +10,10 @@
     };
     taskmatter = {
       url = "github:mtoohey31/taskmatter";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "utils";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
     };
   };
 
