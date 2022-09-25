@@ -1,6 +1,41 @@
-.PHONY: update
+NIX_FLAGS := --quiet
 
-update:
-	for flake in $$(nix eval --json .#templates | jq -r 'keys[]'); do \
-	  test -d "$$flake" && nix flake update "./$${flake}#" ;\
+SYS := $(shell nix $(NIX_FLAGS) eval --raw --impure --expr builtins.currentSystem)
+
+# the names of all templates in this repository
+TPLS := $(shell nix $(NIX_FLAGS) eval --json --no-write-lock-file .#templates |\
+ jq -r keys[] \
+| grep -v default \
+| xargs -I % sh -c 'nix eval --raw --file flake.nix inputs.%.url 2>/dev/null && echo || echo %')
+
+# the names of templates that should have package outputs
+DEV_TPLS := $(filter-out %course,$(TPLS))
+
+.PHONY: test
+all: test
+
+.PHONY: test
+test:
+	# package output tests: check that packages.default builds and prints
+	# "Hello, world!"
+	for flake in $(DEV_TPLS); do \
+	  nix $(NIX_FLAGS) build "./$${flake}#packages.$(SYS).default" ;\
+	  echo "checking $$flake output" ;\
+	  diff <(result/bin/CHANGEME) <(echo "Hello, world!") || exit 1 ;\
 	done
+	# devshell tests: check that devShells.default builds
+	for flake in $(TPLS); do \
+	  echo "checking $$flake devshell" ;\
+	  nix $(NIX_FLAGS) build "./$${flake}#devShells.$(SYS).default" || exit 1 ;\
+	done
+
+.PHONY: update
+update:
+	for flake in $(TPLS); do \
+	  nix $(NIX_FLAGS) flake update "./$${flake}#" ;\
+	done
+	nix $(NIX_FLAGS) flake update .#
+
+.PHONY: clean
+clean:
+	find . -name result -type l -delete
