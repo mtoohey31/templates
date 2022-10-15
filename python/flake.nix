@@ -12,24 +12,18 @@
         projectDir = ./.;
       };
     };
-  } // utils.lib.eachDefaultSystem (system:
-    let
-      pkgs = import nixpkgs {
-        overlays = [ self.overlays.default ];
-        inherit system;
-      };
-    in
-    with pkgs; {
-      packages.default = CHANGEME;
+  } // utils.lib.eachDefaultSystem (system: with import nixpkgs
+    { overlays = [ self.overlays.default ]; inherit system; }; {
+    packages.default = CHANGEME;
 
-      devShells.default = (pkgs.poetry2nix.mkPoetryEnv {
-        projectDir = ./.;
-      }).overrideAttrs (oldAttrs: {
-        nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [
-          poetry
-          python3
-          python3Packages.python-lsp-server
-        ];
-      });
+    devShells.default = (poetry2nix.mkPoetryEnv {
+      projectDir = ./.;
+    }).overrideAttrs (oldAttrs: {
+      nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [
+        poetry
+        python3
+        python3Packages.python-lsp-server
+      ];
     });
+  });
 }

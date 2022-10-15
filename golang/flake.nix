@@ -48,7 +48,7 @@
         })
         self.overlays.default
       ]; inherit system;
-    }; rec {
+    }; {
     packages.default = CHANGEME;
 
     devShells.default = mkShell {

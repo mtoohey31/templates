@@ -27,7 +27,7 @@
       };
     };
   } // utils.lib.eachDefaultSystem (system: with import nixpkgs
-    { overlays = [ self.overlays.default ]; inherit system; }; rec {
+    { overlays = [ self.overlays.default ]; inherit system; }; {
     packages.default = CHANGEME;
 
     devShells.default = mkShell {
