@@ -38,7 +38,6 @@
             version = yaegi-src.shortRev;
             src = yaegi-src;
             vendorSha256 = "pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=";
-            GOROOT = "${final.go_1_18}/share/go";
             fixupPhase = ''
               mv $out/bin/yaegi $out/bin/.yaegi-wrapped
               printf "#!${final.bash}/bin/bash\n${final.rlwrap}/bin/rlwrap $out/bin/.yaegi-wrapped \"\$@\"\n" > $out/bin/yaegi
