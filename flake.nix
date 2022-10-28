@@ -21,10 +21,6 @@
       url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    yaegi-src = {
-      url = "github:traefik/yaegi";
-      flake = false;
-    };
 
     go = {
       url = "./golang";
@@ -32,7 +28,6 @@
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
         gow-src.follows = "gow-src";
-        yaegi-src.follows = "yaegi-src";
       };
     };
     idris = {

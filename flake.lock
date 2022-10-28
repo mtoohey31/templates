@@ -154,19 +154,16 @@
         ],
         "utils": [
           "utils"
-        ],
-        "yaegi-src": [
-          "yaegi-src"
         ]
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-RNaoUaj93j0p2nzY8d16dD3mkNSzCm4mf2g/dTatubw=",
-        "path": "/nix/store/0c5v6rw6511zc47ldd64gjhdv1gy9fi4-source/golang",
+        "narHash": "sha256-9DvM+4AzggO1v/O92sG0xwzeLR0CFnO4Q3yPfCVCueQ=",
+        "path": "/nix/store/2x4fzqqcb7b94kxbydm3jhv156p8y6qx-source/golang",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/0c5v6rw6511zc47ldd64gjhdv1gy9fi4-source/golang",
+        "path": "/nix/store/2x4fzqqcb7b94kxbydm3jhv156p8y6qx-source/golang",
         "type": "path"
       }
     },
@@ -250,11 +247,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-1lyLBv8wpTpyuss14UAQwNsTlhCgS35ka8mv1uDLp5U=",
-        "path": "/nix/store/0c5v6rw6511zc47ldd64gjhdv1gy9fi4-source/idris",
+        "path": "/nix/store/2x4fzqqcb7b94kxbydm3jhv156p8y6qx-source/idris",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/0c5v6rw6511zc47ldd64gjhdv1gy9fi4-source/idris",
+        "path": "/nix/store/2x4fzqqcb7b94kxbydm3jhv156p8y6qx-source/idris",
         "type": "path"
       }
     },
@@ -516,12 +513,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-orACOaQyi2jdHOgg7hlPdPgHZaYN2+ct20fGjBZs9EA=",
-        "path": "/nix/store/0c5v6rw6511zc47ldd64gjhdv1gy9fi4-source/python",
+        "narHash": "sha256-ruxn63pMYfkyGjqTZYXjK2uqyvobZ9Pk9nIYTPCX74I=",
+        "path": "/nix/store/2x4fzqqcb7b94kxbydm3jhv156p8y6qx-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/0c5v6rw6511zc47ldd64gjhdv1gy9fi4-source/python",
+        "path": "/nix/store/2x4fzqqcb7b94kxbydm3jhv156p8y6qx-source/python",
         "type": "path"
       }
     },
@@ -567,8 +564,7 @@
         "nixpkgs": "nixpkgs",
         "python": "python_2",
         "rust": "rust",
-        "utils": "utils",
-        "yaegi-src": "yaegi-src"
+        "utils": "utils"
       }
     },
     "rust": {
@@ -585,12 +581,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-lWy9X4mT/7FcK6xh3zHQuLR3lpcnm2uZ55JERar/oa4=",
-        "path": "/nix/store/0c5v6rw6511zc47ldd64gjhdv1gy9fi4-source/rust",
+        "narHash": "sha256-jdYAnmCiIQ6S0pp2hvHKXzhovkDHBMKjUhKMKPklKPs=",
+        "path": "/nix/store/2x4fzqqcb7b94kxbydm3jhv156p8y6qx-source/rust",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/0c5v6rw6511zc47ldd64gjhdv1gy9fi4-source/rust",
+        "path": "/nix/store/2x4fzqqcb7b94kxbydm3jhv156p8y6qx-source/rust",
         "type": "path"
       }
     },
@@ -670,22 +666,6 @@
       "original": {
         "owner": "madman-bob",
         "repo": "idris2-xml",
-        "type": "github"
-      }
-    },
-    "yaegi-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1663847409,
-        "narHash": "sha256-dBQeI8eNKl5vtdfY3v7nkEI8oolzzjqCCR70s8ZAJDo=",
-        "owner": "traefik",
-        "repo": "yaegi",
-        "rev": "dfeddbe823bceec9e96a0a1cd35cb22043f23ee4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "traefik",
-        "repo": "yaegi",
         "type": "github"
       }
     }
