@@ -16,9 +16,7 @@
     { overlays = [ self.overlays.default ]; inherit system; }; {
     packages.default = CHANGEME;
 
-    devShells.default = (poetry2nix.mkPoetryEnv {
-      projectDir = ./.;
-    }).overrideAttrs (oldAttrs: {
+    devShells.default = CHANGEME.dependencyEnv.overrideAttrs (oldAttrs: {
       nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [
         poetry
         python3
