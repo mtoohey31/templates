@@ -158,23 +158,23 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-QSnO9IcG2+7WZ42fXa/nmQ0lXRYGDDSp1PalNujEaAA=",
-        "path": "/nix/store/i39bzx78rs0mndg20h7qz9a3rihdxk7h-source/golang",
+        "narHash": "sha256-4stW1QExPa8xLtr3hUBf/Wdg6uMDEopIVPGnl5Ls5II=",
+        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/golang",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/i39bzx78rs0mndg20h7qz9a3rihdxk7h-source/golang",
+        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/golang",
         "type": "path"
       }
     },
     "gow-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1660819371,
-        "narHash": "sha256-H8XfenMFskZI4t/BtpVSAhIlNDCkXUiP+gPAW9Z2pGA=",
+        "lastModified": 1665748458,
+        "narHash": "sha256-vlIbVoAxeeQ1SB8FmSAfQ35fX6f+/VGZmrPDdA3HTvs=",
         "owner": "mitranim",
         "repo": "gow",
-        "rev": "11705ebc30f58ef0ec126d9bb7589d2711028d1f",
+        "rev": "a5bfab26a0e42ee646f0969ac3397e80e5e3b1df",
         "type": "github"
       },
       "original": {
@@ -246,12 +246,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-Dbea/xsZ8DUXBZ9IL5yk6/UV6f8DBUhzkfB7e7EJf7E=",
-        "path": "/nix/store/i39bzx78rs0mndg20h7qz9a3rihdxk7h-source/idris",
+        "narHash": "sha256-3pxbFTzDTq4Y/7FaRKBVRm2gLfHBQLkTOsRloD9vvo4=",
+        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/idris",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/i39bzx78rs0mndg20h7qz9a3rihdxk7h-source/idris",
+        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/idris",
         "type": "path"
       }
     },
@@ -441,11 +441,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1664020690,
-        "narHash": "sha256-g36h+u9FZaHeHX8O8EQ9/dCJBbb9m43eiKLdKu0O8KI=",
+        "lastModified": 1668086072,
+        "narHash": "sha256-msFoXI5ThCmhTTqgl27hpCXWhaeqxphBaleJAgD8JYM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9569998606020f3dd3120fdac2149b5cafca1687",
+        "rev": "72d8853228c9758820c39b8659415b6d89279493",
         "type": "github"
       },
       "original": {
@@ -513,12 +513,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-NhVi0PoKX0N8SvvZg5XCoinBh8TPVtkcrK/I0AYJjOA=",
-        "path": "/nix/store/i39bzx78rs0mndg20h7qz9a3rihdxk7h-source/python",
+        "narHash": "sha256-aWQ3KvrOQnk3MWwSPaNE9jwICwSmuZh6ATqnmboTWGE=",
+        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/i39bzx78rs0mndg20h7qz9a3rihdxk7h-source/python",
+        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/python",
         "type": "path"
       }
     },
@@ -581,12 +581,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-dGlZcyxsspm4IoYUH6Ev9osA8Te2ssl5EI7DC4wq+N8=",
-        "path": "/nix/store/i39bzx78rs0mndg20h7qz9a3rihdxk7h-source/rust",
+        "narHash": "sha256-dvwWHFcrrkZGtU/LQ5qW/uP/a2LNPjXWO/YqyccRwLA=",
+        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/rust",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/i39bzx78rs0mndg20h7qz9a3rihdxk7h-source/rust",
+        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/rust",
         "type": "path"
       }
     },
@@ -640,11 +640,11 @@
     },
     "utils": {
       "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
         "type": "github"
       },
       "original": {
