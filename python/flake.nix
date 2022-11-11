@@ -7,7 +7,7 @@
   };
 
   outputs = { self, nixpkgs, utils }: {
-    overlays.default = final: prev: {
+    overlays.default = final: _: {
       CHANGEME = final.poetry2nix.mkPoetryApplication {
         projectDir = ./.;
       };

@@ -13,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, utils, taskmatter }:
+  outputs = { nixpkgs, utils, taskmatter, ... }:
     utils.lib.eachDefaultSystem (system:
       with import nixpkgs
         {

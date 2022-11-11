@@ -12,14 +12,14 @@
 
   outputs = { self, nixpkgs, utils, naersk }: {
     overlays = rec {
-      expects-naersk = final: prev: {
+      expects-naersk = final: _: {
         CHANGEME = final.naersk.buildPackage {
           pname = "CHANGEME";
           root = ./.;
         };
       };
 
-      default = final: prev: {
+      default = _: prev: {
         inherit (prev.appendOverlays [
           naersk.overlay
           expects-naersk

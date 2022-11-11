@@ -17,16 +17,16 @@
     };
   };
 
-  outputs = { self, nixpkgs, utils, colorout-src, taskmatter }:
+  outputs = { nixpkgs, utils, colorout-src, taskmatter, ... }:
     utils.lib.eachDefaultSystem (system:
       with import nixpkgs
         {
           inherit system;
           overlays = [
-            (self: super: {
-              rPackages = super.rPackages // {
+            (_: prev: {
+              rPackages = prev.rPackages // {
                 # TODO: create nixpkgs PR for this
-                colorout = super.rPackages.buildRPackage {
+                colorout = prev.rPackages.buildRPackage {
                   name = "colorout";
                   src = colorout-src;
                   version = colorout-src.shortRev;

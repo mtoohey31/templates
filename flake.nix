@@ -55,7 +55,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, utils, go, idris, python, rust, ... }:
+  outputs = { nixpkgs, utils, go, idris, python, rust, ... }:
     utils.lib.eachDefaultSystem
       (system: with import nixpkgs { inherit system; }; {
         devShells = builtins.mapAttrs (_: value: value.devShells.${system}.default) {

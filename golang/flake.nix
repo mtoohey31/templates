@@ -22,8 +22,8 @@
   } // utils.lib.eachDefaultSystem (system: with import nixpkgs
     {
       overlays = [
-        (final: prev: {
-          gow = final.buildGoModule rec {
+        (final: _: {
+          gow = final.buildGoModule {
             pname = "gow";
             version = gow-src.shortRev;
             src = gow-src;

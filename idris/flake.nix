@@ -20,7 +20,7 @@
         CHANGEME = final.idris2-pkgs._builders.idrisPackage ./. { };
       };
 
-      default = final: prev: {
+      default = _: prev: {
         inherit (prev.appendOverlays [
           idris2-pkgs.overlay
           expects-idris2-pkgs
