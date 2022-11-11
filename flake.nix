@@ -55,35 +55,38 @@
     };
   };
 
-  outputs = { nixpkgs, utils, go, idris, python, rust, ... }:
-    utils.lib.eachDefaultSystem
-      (system: with import nixpkgs { inherit system; }; {
-        devShells = builtins.mapAttrs (_: value: value.devShells.${system}.default) {
-          inherit go idris python rust;
-        };
-      }) // {
-      templates = rec {
-        course.description = "A flake for my university courses with cspell spellcheck, taskmatter for task management, and pandoc and latex for PDF documents.";
-        course.path = ./course;
-        stats-course.description = "An extended version of the course flake that includes R and the R packages I use frequently.";
-        stats-course.path = ./stats-course;
+  outputs = { nixpkgs, utils, ... }@inputs: {
+    devShells = utils.lib.eachDefaultSystemMap (system: builtins.listToAttrs
+      (builtins.map
+        (name: {
+          inherit name;
+          value = inputs.${name}.devShells.${system}.default;
+        })
+        (builtins.filter (name: inputs.${name}.devShells ? "${system}")
+          [ "go" "idris" "python" "rust" ])));
 
-        empty.description = "An empty flake to be used as a starting point for creating new templates.";
-        empty.path = ./empty;
+    templates = rec {
+      course.description = "A flake for my university courses with cspell spellcheck, taskmatter for task management, and pandoc and latex for PDF documents.";
+      course.path = ./course;
+      stats-course.description = "An extended version of the course flake that includes R and the R packages I use frequently.";
+      stats-course.path = ./stats-course;
 
-        go.description = "A flake for Go projects.";
-        go.path = ./golang; # named differently so the build doesn't fail
+      empty.description = "An empty flake to be used as a starting point for creating new templates.";
+      empty.path = ./empty;
 
-        idris.description = "A flake for Idris projects.";
-        idris.path = ./idris;
+      go.description = "A flake for Go projects.";
+      go.path = ./golang; # named differently so the build doesn't fail
 
-        python.description = "A flake for Python projects.";
-        python.path = ./python;
+      idris.description = "A flake for Idris projects.";
+      idris.path = ./idris;
 
-        rust.description = "A flake for Rust projects.";
-        rust.path = ./rust;
+      python.description = "A flake for Python projects.";
+      python.path = ./python;
 
-        default = empty;
-      };
+      rust.description = "A flake for Rust projects.";
+      rust.path = ./rust;
+
+      default = empty;
     };
+  };
 }
