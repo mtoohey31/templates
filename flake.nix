@@ -55,7 +55,7 @@
     };
   };
 
-  outputs = { nixpkgs, utils, ... }@inputs: {
+  outputs = { utils, ... }@inputs: {
     devShells = utils.lib.eachDefaultSystemMap (system: builtins.listToAttrs
       (builtins.map
         (name: {
