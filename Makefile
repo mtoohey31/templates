@@ -11,35 +11,10 @@ TPLS := $(shell nix $(NIX_FLAGS) eval --json --no-write-lock-file .#templates |\
 # the names of templates that should have package outputs
 DEV_TPLS := $(filter-out %course,$(TPLS))
 
+include ./ci.mk
+
 .PHONY: test
 all: ci test
-
-.PHONY: ci
-ci: format-check deadnix-check statix-check
-
-.PHONY: format
-format:
-	nixpkgs-fmt .
-
-.PHONY: format-check
-format-check:
-	nixpkgs-fmt --check .
-
-.PHONY: deadnix
-deadnix:
-	deadnix --edit $$(find -name '*.nix' -not -name 'hardware-configuration.nix')
-
-.PHONY: deadnix-check
-deadnix-check:
-	deadnix --fail $$(find -name '*.nix' -not -name 'hardware-configuration.nix')
-
-.PHONY: statix
-statix:
-	statix fix
-
-.PHONY: statix-check
-statix-check:
-	statix check
 
 .PHONY: test
 test:
