@@ -38,9 +38,7 @@
         rustc
         rustfmt
       ];
-      shellHook = ''
-        export RUST_SRC_PATH=${rustPlatform.rustLibSrc}
-      '';
+      RUST_SRC_PATH = rustPlatform.rustLibSrc;
     };
   });
 }
