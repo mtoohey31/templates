@@ -4,42 +4,27 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     utils.url = "github:numtide/flake-utils";
-    idris2-pkgs = {
-      url = "github:claymager/idris2-pkgs";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "utils";
-        idris-server.follows = "";
-      };
-    };
   };
 
-  outputs = { self, nixpkgs, utils, idris2-pkgs }: {
-    overlays = rec {
-      expects-idris2-pkgs = final: _: {
-        CHANGEME = final.idris2-pkgs._builders.idrisPackage ./. { };
-      };
-
-      default = _: prev: {
-        inherit (prev.appendOverlays [
-          idris2-pkgs.overlay
-          expects-idris2-pkgs
-        ]) CHANGEME;
+  outputs = { self, nixpkgs, utils }: {
+    overlays.default = final: _: {
+      CHANGEME = final.stdenvNoCC.mkDerivation {
+        pname = "CHANGEME";
+        version = "0.1.0";
+        nativeBuildInputs = [ final.idris2 ];
+        src = ./.;
+        makeFlags = [ "PREFIX=$(out)" ];
+        meta.platforms = final.idris2.meta.platforms;
       };
     };
-  } // utils.lib.eachSystem [ "x86_64-linux" "x86_64-darwin" ] (system:
-    let
-      pkgs = import nixpkgs {
-        overlays = [ idris2-pkgs.overlay self.overlays.expects-idris2-pkgs ];
-        inherit system;
-      };
-      inherit (pkgs.idris2-pkgs._builders) devEnv;
-    in
-    with pkgs; {
+  } // utils.lib.eachSystem [ "x86_64-linux" "x86_64-darwin" ]
+    (system: with import nixpkgs
+      { overlays = [ self.overlays.default ]; inherit system; };
+    {
       packages.default = CHANGEME;
 
       devShells.default = mkShell {
-        packages = [ (devEnv CHANGEME) ];
+        packages = [ idris2 ];
       };
     });
 }

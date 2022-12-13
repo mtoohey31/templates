@@ -159,11 +159,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-4stW1QExPa8xLtr3hUBf/Wdg6uMDEopIVPGnl5Ls5II=",
-        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/golang",
+        "path": "/nix/store/dfj3z4d9b3an5nhcl11g2frqjy12bhk6-source/golang",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/golang",
+        "path": "/nix/store/dfj3z4d9b3an5nhcl11g2frqjy12bhk6-source/golang",
         "type": "path"
       }
     },
@@ -234,9 +234,6 @@
     },
     "idris": {
       "inputs": {
-        "idris2-pkgs": [
-          "idris2-pkgs"
-        ],
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -246,12 +243,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-3pxbFTzDTq4Y/7FaRKBVRm2gLfHBQLkTOsRloD9vvo4=",
-        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/idris",
+        "narHash": "sha256-86YDHYntGik0FzZvM7Z2GA8z0Qb1A+jdId8BsBOMgkU=",
+        "path": "/nix/store/dfj3z4d9b3an5nhcl11g2frqjy12bhk6-source/idris",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/idris",
+        "path": "/nix/store/dfj3z4d9b3an5nhcl11g2frqjy12bhk6-source/idris",
         "type": "path"
       }
     },
@@ -514,11 +511,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-aWQ3KvrOQnk3MWwSPaNE9jwICwSmuZh6ATqnmboTWGE=",
-        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/python",
+        "path": "/nix/store/dfj3z4d9b3an5nhcl11g2frqjy12bhk6-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/python",
+        "path": "/nix/store/dfj3z4d9b3an5nhcl11g2frqjy12bhk6-source/python",
         "type": "path"
       }
     },
@@ -581,12 +578,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-dvwWHFcrrkZGtU/LQ5qW/uP/a2LNPjXWO/YqyccRwLA=",
-        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/rust",
+        "narHash": "sha256-rFi5QRt5qWUPsqZL9hT8ESoysStDUvn5uHfX/geCAOA=",
+        "path": "/nix/store/dfj3z4d9b3an5nhcl11g2frqjy12bhk6-source/rust",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/00dlcgj9n6dp45jyxdmdzk7nxvjpzr4l-source/rust",
+        "path": "/nix/store/dfj3z4d9b3an5nhcl11g2frqjy12bhk6-source/rust",
         "type": "path"
       }
     },
