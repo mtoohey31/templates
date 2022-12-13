@@ -161,12 +161,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-fz++OXK8BlJFetVphRTsJQztu3UYt3g3kwzXvWvshvQ=",
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source/golang",
+        "narHash": "sha256-4stW1QExPa8xLtr3hUBf/Wdg6uMDEopIVPGnl5Ls5II=",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source/golang",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source/golang",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source/golang",
         "type": "path"
       }
     },
@@ -237,10 +237,6 @@
     },
     "idris": {
       "inputs": {
-        "idris2-pkgs": [
-          "templates",
-          "idris2-pkgs"
-        ],
         "nixpkgs": [
           "templates",
           "nixpkgs"
@@ -252,12 +248,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-jVNSBmVIZMdF+T8ZA3Q2rpKzvwvrY+3xba34Mick/lM=",
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source/idris",
+        "narHash": "sha256-86YDHYntGik0FzZvM7Z2GA8z0Qb1A+jdId8BsBOMgkU=",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source/idris",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source/idris",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source/idris",
         "type": "path"
       }
     },
@@ -526,12 +522,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-oSh+9GSAiVfpmWv/mda7H9ksS2KwH4M5NPtqT0YU5lw=",
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source/python",
+        "narHash": "sha256-aWQ3KvrOQnk3MWwSPaNE9jwICwSmuZh6ATqnmboTWGE=",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source/python",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source/python",
         "type": "path"
       }
     },
@@ -597,12 +593,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-037p/zXoofFupyPI5cn3b/IF7yZiT42UMs+WshFG+u0=",
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source/rust",
+        "narHash": "sha256-rFi5QRt5qWUPsqZL9hT8ESoysStDUvn5uHfX/geCAOA=",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source/rust",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source/rust",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source/rust",
         "type": "path"
       }
     },
@@ -668,12 +664,12 @@
       },
       "locked": {
         "lastModified": 0,
-        "narHash": "sha256-kGyYsCkSPAspF4SCiiGstk0sDKs4t6QpYWkJhk25rrY=",
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source",
+        "narHash": "sha256-zH+IAkd2RfbFO1XE3TJrW97xCIJT21r/xjkCgJsRuQg=",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/1xs53y11p1g7xbxk0m8r6fp51v781m7w-source",
+        "path": "/nix/store/f5js3wncmqjyy2xinz3wq8qda4irh2w4-source",
         "type": "path"
       }
     },
