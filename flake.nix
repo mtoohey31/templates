@@ -5,18 +5,6 @@
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     utils.url = "github:numtide/flake-utils";
 
-    gow-src = {
-      url = "github:mitranim/gow";
-      flake = false;
-    };
-    idris2-pkgs = {
-      url = "github:claymager/idris2-pkgs";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "utils";
-        idris-server.follows = "";
-      };
-    };
     naersk = {
       url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +15,6 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
-        gow-src.follows = "gow-src";
       };
     };
     idris = {
@@ -35,7 +22,6 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
-        idris2-pkgs.follows = "idris2-pkgs";
       };
     };
     python = {
