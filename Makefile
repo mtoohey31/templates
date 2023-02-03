@@ -9,7 +9,7 @@ TPLS := $(shell nix $(NIX_FLAGS) eval --json --no-write-lock-file .#templates |\
 | xargs -I % sh -c 'nix eval --raw --file flake.nix inputs.%.url 2>/dev/null && echo || echo %')
 
 # the names of templates that should have package outputs
-DEV_TPLS := $(filter-out %course,$(TPLS))
+DEV_TPLS := $(filter-out ./tree-sitter,$(filter-out %course,$(TPLS)))
 
 include ./ci.mk
 

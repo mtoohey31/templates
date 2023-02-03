@@ -39,6 +39,13 @@
         naersk.follows = "naersk";
       };
     };
+    tree-sitter = {
+      url = "./tree-sitter";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
   };
 
   outputs = { utils, ... }@inputs: {
@@ -71,6 +78,9 @@
 
       rust.description = "A flake for Rust projects.";
       rust.path = ./rust;
+
+      tree-sitter.description = "A flake for tree-sitter grammars.";
+      tree-sitter.path = ./tree-sitter;
 
       default = empty;
     };

@@ -1,0 +1,7 @@
+[[language]]
+name = "text"
+scope = "source.text"
+injection-regex = "text"
+file-types = ["txt"]
+roots = []
+indent = { tab-width = 2, unit = "  " }
