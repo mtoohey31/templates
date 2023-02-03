@@ -6,7 +6,7 @@
     utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, utils }: utils.lib.eachDefaultSystem
+  outputs = { nixpkgs, utils, ... }: utils.lib.eachDefaultSystem
     # TODO: add package output
     (system: with import nixpkgs { inherit system; }; {
       devShells.default = mkShell {
