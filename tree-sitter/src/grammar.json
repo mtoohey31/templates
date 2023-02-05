@@ -1,0 +1,21 @@
+{
+  "name": "CHANGEME",
+  "rules": {
+    "source_file": {
+      "type": "SEQ",
+      "members": []
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
+
