@@ -1,6 +1,6 @@
 {
   inputs = {
-    templates.url = "../";
+    templates.url = "path:../";
     nixpkgs.follows = "templates/nixpkgs";
     utils.follows = "templates/utils";
   };
