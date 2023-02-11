@@ -9,5 +9,12 @@
   "devDependencies": {
     "tree-sitter-cli": "^0.20.7"
   },
-  "main": "bindings/node"
+  "main": "bindings/node",
+  "tree-sitter": [
+    {
+      "scope": "source.CHANGEME",
+      "injection-regex": "CHANGEME",
+      "file-types": ["CHANGEME"]
+    }
+  ]
 }
