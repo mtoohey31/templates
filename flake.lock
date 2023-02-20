@@ -11,12 +11,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-dY/X+2kHSUpPbGSNRka2SXvkFROD6fMQ0pWuC1ihDKQ=",
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/golang",
+        "narHash": "sha256-nstsOf7Cg/j/gGwHbqNKiIyDFuxF2OF+hHU78DjICHc=",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/golang",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/golang",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/golang",
         "type": "path"
       }
     },
@@ -31,12 +31,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-ITqlJQmOr+KyFGQZnx+cH5DKrLe3okGWzVI6Qxj3ye0=",
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/idris",
+        "narHash": "sha256-F1sJXDEqUbrCir1IzUdGxChYo+TPAHXNbSEvj3epa+Y=",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/idris",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/idris",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/idris",
         "type": "path"
       }
     },
@@ -62,11 +62,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1675279076,
-        "narHash": "sha256-I8sMB4TBkhNY4lcKtb+pwEDB50My3+JG5Ti8J3sEmCc=",
+        "lastModified": 1676790509,
+        "narHash": "sha256-W9uWAWokgS8US8rJf79qBLS2M+ZgIscfoz+KsNE7VGQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c6fd903606866634312e40cceb2caee8c0c9243f",
+        "rev": "a1291d0d020a200c7ce3c48e96090bfa4890a475",
         "type": "github"
       },
       "original": {
@@ -86,12 +86,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-zhBOGu4kmSKKHhwbogKfRwQJuciWwUOnIbuK5x7VJB4=",
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/python",
+        "narHash": "sha256-0vBYtm5R2uq8ZYtI7EsBLG/nCjtGaudF/2oRyANXkMA=",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/python",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/python",
         "type": "path"
       }
     },
@@ -121,12 +121,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-iHTWOIBQFvPD9krBldzf6xLBgKu0Rjs3rWNqTkJUW4g=",
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/rust",
+        "narHash": "sha256-1Z1yo0r7beDTw3TQYLOcZbRHnY0aJcC3D03ZA8o4Mcc=",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/rust",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/rust",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/rust",
         "type": "path"
       }
     },
@@ -141,22 +141,22 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-kQxFCu8E2vAKwRfI1pwe7ch3PfE1TMXWQLKenxbI2EU=",
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/tree-sitter",
+        "narHash": "sha256-HbVmVLqqQhdti3iKpT/Gle+LgTOzta1qgAtI//agr2s=",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/tree-sitter",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/iihzf8nrdfj9r40nx1z4z6c4mwck2rgl-source/tree-sitter",
+        "path": "/nix/store/69xc33dh869is68xxqxp3adz3q57005k-source/tree-sitter",
         "type": "path"
       }
     },
     "utils": {
       "locked": {
-        "lastModified": 1667395993,
-        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
+        "lastModified": 1676283394,
+        "narHash": "sha256-XX2f9c3iySLCw54rJ/CZs+ZK6IQy7GXNY4nSOyu2QG4=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "rev": "3db36a8b464d0c4532ba1c7dda728f4576d6d073",
         "type": "github"
       },
       "original": {
