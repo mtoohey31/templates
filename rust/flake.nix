@@ -38,7 +38,6 @@
         rustc
         rustfmt
       ];
-      RUST_SRC_PATH = rustPlatform.rustLibSrc;
     };
   });
 }
