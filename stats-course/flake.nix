@@ -28,8 +28,8 @@
                 # TODO: create nixpkgs PR for this
                 colorout = prev.rPackages.buildRPackage {
                   name = "colorout";
-                  src = colorout-src;
                   version = colorout-src.shortRev;
+                  src = colorout-src;
                 };
               };
             })

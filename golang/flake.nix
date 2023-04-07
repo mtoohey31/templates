@@ -8,9 +8,9 @@
 
   outputs = { self, nixpkgs, utils }: {
     overlays.default = final: _: {
-      CHANGEME = final.buildGoModule rec {
-        name = "CHANGEME";
-        pname = name;
+      CHANGEME = final.buildGoModule {
+        pname = "CHANGEME";
+        version = "0.1.0";
         src = ./.;
         vendorSha256 = null;
       };
