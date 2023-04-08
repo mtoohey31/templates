@@ -25,8 +25,8 @@
             src = final.fetchFromGitHub {
               owner = "mitranim";
               repo = pname;
-              rev = "a5bfab26a0e42ee646f0969ac3397e80e5e3b1df";
-              sha256 = "vlIbVoAxeeQ1SB8FmSAfQ35fX6f+/VGZmrPDdA3HTvs=";
+              rev = "36c8536a96b851631e800bb00f73383fc506f210";
+              sha256 = "q56s97j+Npurb942TeQhJPqq1vl/XFe7a2Dj5fw7EtQ=";
             };
             vendorSha256 = "o6KltbjmAN2w9LMeS9oozB0qz9tSMYmdDW3CwUNChzA=";
           };
