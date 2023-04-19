@@ -15,7 +15,7 @@
       expects-naersk = final: _: {
         CHANGEME = final.naersk.buildPackage {
           pname = "CHANGEME";
-          root = ./.;
+          root = builtins.path { path = ./.; name = "CHANGME-src"; };
         };
       };
 
@@ -26,18 +26,26 @@
         ]) CHANGEME;
       };
     };
-  } // utils.lib.eachDefaultSystem (system: with import nixpkgs
-    { overlays = [ self.overlays.default ]; inherit system; }; {
-    packages.default = CHANGEME;
+  } // utils.lib.eachDefaultSystem (system:
+    let
+      pkgs = import nixpkgs {
+        overlays = [ self.overlays.default ];
+        inherit system;
+      };
+      inherit (pkgs) CHANGEME cargo cargo-watch mkShell rust-analyzer rustc
+        rustfmt;
+    in
+    {
+      packages.default = CHANGEME;
 
-    devShells.default = mkShell {
-      packages = [
-        cargo
-        cargo-watch
-        rust-analyzer
-        rustc
-        rustfmt
-      ];
-    };
-  });
+      devShells.default = mkShell {
+        packages = [
+          cargo
+          cargo-watch
+          rust-analyzer
+          rustc
+          rustfmt
+        ];
+      };
+    });
 }

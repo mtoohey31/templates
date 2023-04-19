@@ -19,8 +19,8 @@
 
   outputs = { nixpkgs, utils, colorout-src, taskmatter, ... }:
     utils.lib.eachDefaultSystem (system:
-      with import nixpkgs
-        {
+      let
+        pkgs = import nixpkgs {
           inherit system;
           overlays = [
             (_: prev: {
@@ -35,13 +35,16 @@
             })
             taskmatter.overlays.default
           ];
-        }; {
+        };
+        inherit (pkgs) mkShell nodePackages pandoc rPackages rWrapper texlive;
+      in
+      {
         devShells.default = mkShell {
           packages = [
             nodePackages.cspell
             pandoc
             ((
-              pkgs.rWrapper.override {
+              rWrapper.override {
                 packages = with rPackages; [
                   colorout
                   ggplot2
@@ -55,8 +58,8 @@
               '';
             }))
             pkgs.taskmatter
-            (pkgs.texlive.combine {
-              inherit (pkgs.texlive) scheme-small mdframed needspace zref;
+            (texlive.combine {
+              inherit (texlive) scheme-small mdframed needspace zref;
             })
           ];
           shellHook = ''

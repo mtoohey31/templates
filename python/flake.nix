@@ -9,19 +9,26 @@
   outputs = { self, nixpkgs, utils }: {
     overlays.default = final: _: {
       CHANGEME = final.poetry2nix.mkPoetryApplication {
-        projectDir = ./.;
+        projectDir = builtins.path { path = ./.; name = "CHANGME-src"; };
       };
     };
-  } // utils.lib.eachDefaultSystem (system: with import nixpkgs
-    { overlays = [ self.overlays.default ]; inherit system; }; {
-    packages.default = CHANGEME;
+  } // utils.lib.eachDefaultSystem (system:
+    let
+      pkgs = import nixpkgs {
+        overlays = [ self.overlays.default ];
+        inherit system;
+      };
+      inherit (pkgs) CHANGEME poetry python3 python3Packages;
+    in
+    {
+      packages.default = CHANGEME;
 
-    devShells.default = CHANGEME.dependencyEnv.overrideAttrs (oldAttrs: {
-      nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [
-        poetry
-        python3
-        python3Packages.python-lsp-server
-      ];
+      devShells.default = CHANGEME.dependencyEnv.overrideAttrs (oldAttrs: {
+        nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [
+          poetry
+          python3
+          python3Packages.python-lsp-server
+        ];
+      });
     });
-  });
 }

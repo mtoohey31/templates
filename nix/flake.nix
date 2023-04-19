@@ -6,9 +6,14 @@
   };
 
   outputs = { nixpkgs, utils, ... }: utils.lib.eachDefaultSystem
-    (system: with import nixpkgs { inherit system; }; {
-      devShells.default = mkShell {
-        packages = [ deadnix nil nixpkgs-fmt statix ];
-      };
-    });
+    (system:
+      let
+        pkgs = import nixpkgs { inherit system; };
+        inherit (pkgs) mkShell deadnix nil nixpkgs-fmt statix;
+      in
+      {
+        devShells.default = mkShell {
+          packages = [ deadnix nil nixpkgs-fmt statix ];
+        };
+      });
 }

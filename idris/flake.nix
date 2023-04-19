@@ -12,19 +12,25 @@
         pname = "CHANGEME";
         version = "0.1.0";
         nativeBuildInputs = [ final.idris2 ];
-        src = ./.;
+        src = builtins.path { path = ./.; name = "CHANGME-src"; };
         makeFlags = [ "PREFIX=$(out)" ];
         meta.platforms = final.idris2.meta.platforms;
       };
     };
   } // utils.lib.eachSystem [ "x86_64-linux" "x86_64-darwin" ]
-    (system: with import nixpkgs
-      { overlays = [ self.overlays.default ]; inherit system; };
-    {
-      packages.default = CHANGEME;
+    (system:
+      let
+        pkgs = import nixpkgs {
+          overlays = [ self.overlays.default ];
+          inherit system;
+        };
+        inherit (pkgs) CHANGEME idris2 mkShell;
+      in
+      {
+        packages.default = CHANGEME;
 
-      devShells.default = mkShell {
-        packages = [ idris2 ];
-      };
-    });
+        devShells.default = mkShell {
+          packages = [ idris2 ];
+        };
+      });
 }
