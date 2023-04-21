@@ -35,13 +35,13 @@
           self.overlays.default
         ]; inherit system;
       };
-      inherit (pkgs) CHANGEME go gopls gow mkShell revive;
+      inherit (pkgs) CHANGEME go gopls gow mkShell;
     in
     {
       packages.default = CHANGEME;
 
       devShells.default = mkShell {
-        packages = [ go gopls gow revive ];
+        packages = [ go gopls gow ];
       };
     });
 }
