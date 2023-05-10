@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cspell --config .cspell.yaml lint --no-progress --no-summary .
