@@ -9,7 +9,7 @@
   outputs = { self, nixpkgs, utils }: {
     overlays.default = final: _: {
       CHANGEME = final.poetry2nix.mkPoetryApplication {
-        projectDir = builtins.path { path = ./.; name = "CHANGME-src"; };
+        projectDir = builtins.path { path = ./.; name = "CHANGEME-src"; };
       };
     };
   } // utils.lib.eachDefaultSystem (system:

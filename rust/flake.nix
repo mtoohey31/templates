@@ -15,7 +15,7 @@
       expects-naersk = final: _: {
         CHANGEME = final.naersk.buildPackage {
           pname = "CHANGEME";
-          root = builtins.path { path = ./.; name = "CHANGME-src"; };
+          root = builtins.path { path = ./.; name = "CHANGEME-src"; };
         };
       };
 

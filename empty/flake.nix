@@ -11,7 +11,7 @@
       CHANGEME = final.stdenv.mkDerivation {
         pname = "CHANGEME";
         version = "0.1.0";
-        src = builtins.path { path = ./.; name = "CHANGME-src"; };
+        src = builtins.path { path = ./.; name = "CHANGEME-src"; };
       };
     };
   } // utils.lib.eachDefaultSystem (system:

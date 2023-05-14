@@ -12,7 +12,7 @@
         pname = "CHANGEME";
         version = "0.1.0";
         nativeBuildInputs = [ final.idris2 ];
-        src = builtins.path { path = ./.; name = "CHANGME-src"; };
+        src = builtins.path { path = ./.; name = "CHANGEME-src"; };
         makeFlags = [ "PREFIX=$(out)" ];
         meta.platforms = final.idris2.meta.platforms;
       };

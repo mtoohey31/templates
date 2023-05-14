@@ -12,7 +12,7 @@
         extraGrammars.tree-sitter-CHANGEME = {
           language = "CHANGEME";
           inherit (prev.tree-sitter) version;
-          src = _: builtins.path { path = ./.; name = "CHANGME-src"; };
+          src = _: builtins.path { path = ./.; name = "CHANGEME-src"; };
         };
       };
     };
