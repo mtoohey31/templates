@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "naersk": {
+      "inputs": {
+        "nixpkgs": [
+          "spaced",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1679567394,
+        "narHash": "sha256-ZvLuzPeARDLiQUt6zSZFGOs+HZmE+3g4QURc8mkBsfM=",
+        "owner": "nix-community",
+        "repo": "naersk",
+        "rev": "88cd22380154a2c36799fe8098888f0f59861a15",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "naersk",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1680942619,
@@ -18,8 +39,33 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
+        "spaced": "spaced",
         "taskmatter": "taskmatter",
         "utils": "utils"
+      }
+    },
+    "spaced": {
+      "inputs": {
+        "naersk": "naersk",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": [
+          "utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1684084784,
+        "narHash": "sha256-0NiWtGNNQSTUkp8B2DsB8JdmxbNzC227cCh2Fx7rY4A=",
+        "owner": "mtoohey31",
+        "repo": "spaced",
+        "rev": "66c3cc3f70d0f46f8321afb89ca2c7b6d65d8e7c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mtoohey31",
+        "repo": "spaced",
+        "type": "github"
       }
     },
     "taskmatter": {

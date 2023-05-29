@@ -15,9 +15,16 @@
         utils.follows = "utils";
       };
     };
+    spaced = {
+      url = "github:mtoohey31/spaced";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
   };
 
-  outputs = { nixpkgs, utils, colorout-src, taskmatter, ... }:
+  outputs = { nixpkgs, utils, colorout-src, taskmatter, spaced, ... }:
     utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
@@ -34,6 +41,7 @@
               };
             })
             taskmatter.overlays.default
+            spaced.overlays.default
           ];
         };
         inherit (pkgs) mkShell nodePackages pandoc rPackages rWrapper texlive;
@@ -61,6 +69,7 @@
             (texlive.combine {
               inherit (texlive) scheme-small mdframed needspace zref;
             })
+            pkgs.spaced
           ];
           shellHook = ''
             export R_PROFILE_USER="$PWD/.Rprofile"
