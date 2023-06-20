@@ -1,2 +1,4 @@
-build/
 /result
+/.direnv
+
+build/
