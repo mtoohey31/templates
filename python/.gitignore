@@ -1,2 +1,5 @@
 /result
 /.direnv
+
+**/__pycache__/
+/CHANGME.egg-info/
