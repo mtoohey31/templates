@@ -30,20 +30,25 @@
           ];
           inherit system;
         };
-        inherit (pkgs) mkShell nodePackages pandoc texlive;
+        inherit (pkgs) mkShell nodePackages pandoc texlive writeShellScriptBin;
+        pandoc-wrapped = writeShellScriptBin "pandoc" ''
+          ${pandoc}/bin/pandoc --metadata-file "$PANDOC_METADATA_FILE" "$@"
+        '';
       in
       {
         devShells.default = mkShell {
           packages = [
             nodePackages.cspell
-            # TODO: wrap pandoc with defaults
-            pandoc
+            pandoc-wrapped
             pkgs.taskmatter
             (texlive.combine {
               inherit (texlive) scheme-small mdframed needspace zref;
             })
             pkgs.spaced
           ];
+          shellHook = ''
+            export PANDOC_METADATA_FILE="$PWD/.pandoc-metadata.yaml"
+          '';
         };
       });
 }

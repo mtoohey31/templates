@@ -44,13 +44,17 @@
             spaced.overlays.default
           ];
         };
-        inherit (pkgs) mkShell nodePackages pandoc rPackages rWrapper texlive;
+        inherit (pkgs) mkShell nodePackages pandoc rPackages rWrapper texlive
+          writeShellScriptBin;
+        pandoc-wrapped = writeShellScriptBin "pandoc" ''
+          ${pandoc}/bin/pandoc --metadata-file "$PANDOC_METADATA_FILE" "$@"
+        '';
       in
       {
         devShells.default = mkShell {
           packages = [
             nodePackages.cspell
-            pandoc
+            pandoc-wrapped
             ((
               rWrapper.override {
                 packages = with rPackages; [
@@ -72,6 +76,7 @@
             pkgs.spaced
           ];
           shellHook = ''
+            export PANDOC_METADATA_FILE="$PWD/.pandoc-metadata.yaml"
             export R_PROFILE_USER="$PWD/.Rprofile"
             export R_HISTFILE="$PWD/.Rhistory"
           '';
