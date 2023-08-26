@@ -8,13 +8,6 @@
       url = "github:jalvesaq/colorout";
       flake = false;
     };
-    taskmatter = {
-      url = "github:mtoohey31/taskmatter";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
-    };
     spaced = {
       url = "github:mtoohey31/spaced";
       inputs = {
@@ -22,9 +15,16 @@
         utils.follows = "utils";
       };
     };
+    taskmatter = {
+      url = "github:mtoohey31/taskmatter";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
   };
 
-  outputs = { nixpkgs, utils, colorout-src, taskmatter, spaced, ... }:
+  outputs = { nixpkgs, utils, colorout-src, spaced, taskmatter, ... }:
     utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
@@ -40,8 +40,8 @@
                 };
               };
             })
-            taskmatter.overlays.default
             spaced.overlays.default
+            taskmatter.overlays.default
           ];
         };
         inherit (pkgs) mkShell nodePackages pandoc rPackages rWrapper texlive
@@ -69,11 +69,11 @@
                   --add-flags "--save"
               '';
             }))
+            pkgs.spaced
             pkgs.taskmatter
             (texlive.combine {
               inherit (texlive) scheme-small mdframed needspace zref;
             })
-            pkgs.spaced
           ];
           shellHook = ''
             export PANDOC_METADATA_FILE="$PWD/.pandoc-metadata.yaml"
