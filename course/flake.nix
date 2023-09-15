@@ -44,7 +44,7 @@
             pkgs.spaced
             pkgs.taskmatter
             (texlive.combine {
-              inherit (texlive) scheme-small mdframed needspace zref;
+              inherit (texlive) mdframed needspace scheme-small zref;
             })
           ];
           shellHook = ''
