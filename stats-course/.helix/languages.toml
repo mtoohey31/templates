@@ -1,0 +1,20 @@
+[[language]]
+name = "markdown"
+language-server = { command = "diagnostic-languageserver", args = ["--stdio"] }
+
+[language.config.linters.cspell]
+sourceName = "cspell"
+command = "cspell"
+args = [
+  "--config",
+  ".cspell.yaml",
+  "lint",
+  "stdin://%filepath",
+  "--no-progress",
+  "--no-summary",
+]
+rootPatterns = [".cspell.yaml"]
+formatPattern = [".*:(\\d+):(\\d+) - (.*)", { line = 1, column = 2, message = 3 }]
+
+[language.config.filetypes]
+markdown = "cspell"

@@ -47,6 +47,7 @@
         };
         inherit (pkgs) mkShell nodePackages pandoc rPackages rWrapper texlive
           writeShellScriptBin;
+        inherit (nodePackages) cspell diagnostic-languageserver;
         pandoc-wrapped = writeShellScriptBin "pandoc" ''
           ${pandoc}/bin/pandoc --metadata-file "$PANDOC_METADATA_FILE" "$@"
         '';
@@ -54,7 +55,8 @@
       {
         devShells.default = mkShell {
           packages = [
-            nodePackages.cspell
+            cspell
+            diagnostic-languageserver
             pandoc-wrapped
             ((
               rWrapper.override {

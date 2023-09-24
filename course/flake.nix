@@ -32,6 +32,7 @@
           inherit system;
         };
         inherit (pkgs) mkShell nodePackages pandoc texlive writeShellScriptBin;
+        inherit (nodePackages) cspell diagnostic-languageserver;
         pandoc-wrapped = writeShellScriptBin "pandoc" ''
           ${pandoc}/bin/pandoc --metadata-file "$PANDOC_METADATA_FILE" "$@"
         '';
@@ -39,7 +40,8 @@
       {
         devShells.default = mkShell {
           packages = [
-            nodePackages.cspell
+            cspell
+            diagnostic-languageserver
             pandoc-wrapped
             pkgs.spaced
             pkgs.taskmatter
