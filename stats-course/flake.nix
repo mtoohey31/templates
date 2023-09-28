@@ -64,6 +64,7 @@
                   colorout
                   ggplot2
                   languageserver
+                  rmarkdown
                 ];
               }).overrideAttrs (oldAttrs: {
               buildCommand = oldAttrs.buildCommand + ''
