@@ -11,12 +11,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-BL6f/UQBfICrET1uekSQvcZIJrmxeJCdzBm4fJ8kXhQ=",
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/golang",
+        "narHash": "sha256-U2v0WyB9jcdQy6Le0QaHUfaSuQ5il8qT/tUA1S+ElC0=",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/golang",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/golang",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/golang",
         "type": "path"
       }
     },
@@ -31,12 +31,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-uOYMIOj5RTS2rn+tjgvX/+IXWIMOtsa8TU4131CzNrM=",
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/idris",
+        "narHash": "sha256-QMxpOFwGa5kNtAPAeAQYf16VKuY6HhFIU3E69L1coBk=",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/idris",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/idris",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/idris",
         "type": "path"
       }
     },
@@ -47,11 +47,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1694081375,
-        "narHash": "sha256-vzJXOUnmkMCm3xw8yfPP5m8kypQ3BhAIRe4RRCWpzy8=",
+        "lastModified": 1698420672,
+        "narHash": "sha256-/TdeHMPRjjdJub7p7+w55vyABrsJlt5QkznPYy55vKA=",
         "owner": "nix-community",
         "repo": "naersk",
-        "rev": "3f976d822b7b37fc6fb8e6f157c2dd05e7e94e89",
+        "rev": "aeb58d5e8faead8980a807c840232697982d47b9",
         "type": "github"
       },
       "original": {
@@ -62,11 +62,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1697009197,
-        "narHash": "sha256-viVRhBTFT8fPJTb1N3brQIpFZnttmwo3JVKNuWRVc3s=",
+        "lastModified": 1700108881,
+        "narHash": "sha256-+Lqybl8kj0+nD/IlAWPPG/RDTa47gff9nbei0u7BntE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "01441e14af5e29c9d27ace398e6dd0b293e25a54",
+        "rev": "7414e9ee0b3e9903c24d3379f577a417f0aae5f1",
         "type": "github"
       },
       "original": {
@@ -86,12 +86,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-jIDBoge010fyU/oU/qvK0FjTyYpMkEyVLUlAF7gNTnA=",
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/python",
+        "narHash": "sha256-maQHGMyIqHDVra0d9ov616WbvpE2rNc+DIAfmtdisao=",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/python",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/python",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/python",
         "type": "path"
       }
     },
@@ -121,12 +121,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-jutU1EbLVNyy0g2w092ESvwEDTpXE5VEmhmzrRyO+5o=",
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/rust",
+        "narHash": "sha256-tfaxG5kTz5lub4t4OccKydt4chH6Nu87OPnAM7a62GE=",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/rust",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/rust",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/rust",
         "type": "path"
       }
     },
@@ -156,12 +156,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-XLHJv0EErMGQgrf4LFAKA65gcV5fIZXS1R4GeD5bN8o=",
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/tree-sitter",
+        "narHash": "sha256-Qgnh7KiK7uHxpH+LEmnrVu3l14tJLGMnnQbnHHLdmAM=",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/tree-sitter",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/448z8s3d482xjfbq7i1fafi4m0s9j3cp-source/tree-sitter",
+        "path": "/nix/store/djcg6vfa574pcd29dnb3xy7w9xyy29gb-source/tree-sitter",
         "type": "path"
       }
     },

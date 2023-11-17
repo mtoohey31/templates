@@ -12,7 +12,7 @@
         pname = "CHANGEME";
         version = "0.1.0";
         src = builtins.path { path = ./.; name = "CHANGEME-src"; };
-        vendorSha256 = null;
+        vendorHash = null;
       };
     };
   } // utils.lib.eachDefaultSystem (system:

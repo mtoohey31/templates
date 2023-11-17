@@ -4,12 +4,25 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     utils.url = "github:numtide/flake-utils";
+    poetry2nix = {
+      url = "github:nix-community/poetry2nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, utils }: {
-    overlays.default = final: _: {
-      CHANGEME = final.poetry2nix.mkPoetryApplication {
-        projectDir = builtins.path { path = ./.; name = "CHANGEME-src"; };
+  outputs = { self, nixpkgs, utils, poetry2nix }: {
+    overlays = rec {
+      expects-poetry2nix = final: _: {
+        CHANGEME = final.poetry2nix.mkPoetryApplication {
+          projectDir = builtins.path { path = ./.; name = "CHANGEME-src"; };
+        };
+      };
+
+      default = _: prev: {
+        inherit (prev.appendOverlays [
+          poetry2nix.overlays.default
+          expects-poetry2nix
+        ]) CHANGEME;
       };
     };
   } // utils.lib.eachDefaultSystem (system:
