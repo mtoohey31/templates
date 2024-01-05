@@ -1,8 +1,8 @@
-[[language]]
-name = "markdown"
-language-server = { command = "diagnostic-languageserver", args = ["--stdio"] }
+[language-server.diagnostic-ls]
+command = "diagnostic-languageserver"
+args = ["--stdio"]
 
-[language.config.linters.cspell]
+[language-server.diagnostic-ls.config.linters.cspell]
 sourceName = "cspell"
 command = "cspell"
 args = [
@@ -16,5 +16,13 @@ args = [
 rootPatterns = [".cspell.yaml"]
 formatPattern = [".*:(\\d+):(\\d+) - (.*)", { line = 1, column = 2, message = 3 }]
 
-[language.config.filetypes]
+[language-server.diagnostic-ls.config.filetypes]
 markdown = "cspell"
+
+[[language]]
+name = "markdown"
+language-servers = ["diagnostic-ls"]
+
+[[language]]
+name = "rmarkdown"
+language-id = "rmd"
