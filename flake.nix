@@ -24,6 +24,13 @@
         utils.follows = "utils";
       };
     };
+    ocaml = {
+      url = "./ocaml";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
     python = {
       url = "./python";
       inputs = {
@@ -56,7 +63,7 @@
           value = inputs.${name}.devShells.${system}.default;
         })
         (builtins.filter (name: inputs.${name}.devShells ? "${system}")
-          [ "go" "idris" "python" "rust" ])));
+          [ "go" "idris" "ocaml" "python" "rust" ])));
 
     templates = rec {
       course.description = "A flake for my university courses with cspell spellcheck, taskmatter for task management, and pandoc and latex for PDF documents.";
@@ -72,6 +79,9 @@
 
       idris.description = "A flake for Idris projects.";
       idris.path = ./idris;
+
+      ocaml.description = "A flake for OCaml projects.";
+      ocaml.path = ./ocaml;
 
       python.description = "A flake for Python projects.";
       python.path = ./python;
