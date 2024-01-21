@@ -1,4 +1,9 @@
 [[language]]
+name = "javascript"
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
 name = "text"
 scope = "source.text"
 injection-regex = "text"

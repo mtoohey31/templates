@@ -23,6 +23,7 @@
         inherit system;
       };
       inherit (pkgs) mkShell nodejs nodePackages python3 tree-sitter typescript;
+      inherit (nodePackages) prettier typescript-language-server;
     in
     {
       packages.default = tree-sitter.builtGrammars.tree-sitter-CHANGEME;
@@ -30,10 +31,11 @@
       devShells.default = mkShell {
         packages = [
           nodejs
-          nodePackages.typescript-language-server
+          prettier
           python3
           tree-sitter
           typescript
+          typescript-language-server
         ];
       };
     });

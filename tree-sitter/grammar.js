@@ -2,8 +2,8 @@
 // @ts-check
 
 module.exports = grammar({
-  name: 'CHANGEME',
+  name: "CHANGEME",
   rules: {
-    source_file: $ => seq(),
-  }
-})
+    source_file: ($) => blank(),
+  },
+});
