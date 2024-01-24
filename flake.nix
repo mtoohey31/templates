@@ -68,8 +68,6 @@
     templates = rec {
       course.description = "A flake for my university courses with cspell spellcheck, taskmatter for task management, and pandoc and latex for PDF documents.";
       course.path = ./course;
-      stats-course.description = "An extended version of the course flake that includes R and the R packages I use frequently.";
-      stats-course.path = ./stats-course;
 
       empty.description = "An empty flake to be used as a starting point for creating new templates.";
       empty.path = ./empty;

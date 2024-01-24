@@ -1,7 +1,0 @@
-version: 0.2
-language: "en-GB"
-words:
-  - Toohey
-overrides:
-  - filename: "*.md"
-    dictionaries: ["!!latex"]
