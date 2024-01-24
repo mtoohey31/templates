@@ -1,24 +1,11 @@
-[language-server.diagnostic-ls]
-command = "diagnostic-languageserver"
-args = ["--stdio"]
+[language-server.efm-langserver]
+command = "efm-langserver"
 
-[language-server.diagnostic-ls.config.linters.cspell]
-sourceName = "cspell"
-command = "cspell"
-args = [
-  "--config",
-  ".cspell.yaml",
-  "lint",
-  "stdin://%filepath",
-  "--no-progress",
-  "--no-summary",
-]
-rootPatterns = [".cspell.yaml"]
-formatPattern = [".*:(\\d+):(\\d+) - (.*)", { line = 1, column = 2, message = 3 }]
-
-[language-server.diagnostic-ls.config.filetypes]
-markdown = "cspell"
+[[language-server.efm-langserver.config.languages.markdown]]
+lintCommand = "cspell --config .cspell.yaml lint stdin://${INPUT} --no-progress --no-summary"
+lintStdin = true
+lintFormats = ["%f:%l:%c - %m"]
 
 [[language]]
 name = "markdown"
-language-servers = ["diagnostic-ls"]
+language-servers = ["efm-langserver"]
