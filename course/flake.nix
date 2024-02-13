@@ -31,7 +31,8 @@
           ];
           inherit system;
         };
-        inherit (pkgs) efm-langserver mkShell nodePackages pandoc texlive;
+        inherit (pkgs) efm-langserver mkShell nodePackages pandoc typst
+          typst-lsp typstfmt;
         inherit (nodePackages) cspell;
       in
       {
@@ -42,13 +43,10 @@
             pandoc
             pkgs.spaced
             pkgs.taskmatter
-            (texlive.combine {
-              inherit (texlive) mdframed needspace scheme-small zref;
-            })
+            typst
+            typst-lsp
+            typstfmt
           ];
-          shellHook = ''
-            export PANDOC_METADATA_FILE="$PWD/.pandoc-metadata.yaml"
-          '';
         };
       });
 }

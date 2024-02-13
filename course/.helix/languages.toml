@@ -1,11 +1,14 @@
 [language-server.efm-langserver]
 command = "efm-langserver"
 
-[[language-server.efm-langserver.config.languages.markdown]]
+[[language-server.efm-langserver.config.languages.typst]]
 lintCommand = "cspell --config .cspell.yaml lint stdin://${INPUT} --no-progress --no-summary"
 lintStdin = true
 lintFormats = ["%f:%l:%c - %m"]
 
+[language-server.typst-lsp.config]
+experimentalFormatterMode = "on"
+
 [[language]]
-name = "markdown"
-language-servers = ["efm-langserver"]
+name = "typst"
+language-servers = ["efm-langserver", "typst-lsp"]
