@@ -31,8 +31,8 @@
           ];
           inherit system;
         };
-        inherit (pkgs) efm-langserver mkShell nodePackages pandoc typst
-          typst-lsp typstfmt;
+        inherit (pkgs) efm-langserver mkShell nodePackages typst typst-lsp
+          typstfmt;
         inherit (nodePackages) cspell;
       in
       {
@@ -40,7 +40,6 @@
           packages = [
             cspell
             efm-langserver
-            pandoc
             pkgs.spaced
             pkgs.taskmatter
             typst
