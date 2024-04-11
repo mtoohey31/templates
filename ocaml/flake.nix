@@ -8,7 +8,7 @@
 
   outputs = { self, nixpkgs, utils }: {
     overlays.default = _: prev: {
-      ocamlPackages = prev.ocamlPackages.overrideScope' (final: _: {
+      ocamlPackages = prev.ocamlPackages.overrideScope (final: _: {
         CHANGEME = final.buildDunePackage {
           pname = "CHANGEME";
           version = "0.1.0";
