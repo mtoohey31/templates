@@ -31,8 +31,7 @@
           ];
           inherit system;
         };
-        inherit (pkgs) efm-langserver mkShell nodePackages typst typst-lsp
-          typstfmt;
+        inherit (pkgs) efm-langserver mkShell nodePackages typst typst-lsp;
         inherit (nodePackages) cspell;
       in
       {
@@ -44,7 +43,6 @@
             pkgs.taskmatter
             typst
             typst-lsp
-            typstfmt
           ];
         };
       });
