@@ -66,7 +66,7 @@
           [ "go" "idris" "ocaml" "python" "rust" ])));
 
     templates = rec {
-      course.description = "A flake for my university courses with cspell spellcheck, taskmatter for task management, and pandoc and latex for PDF documents.";
+      course.description = "A flake for my university courses with cspell spellcheck, taskmatter for task management, and typst for PDF documents.";
       course.path = ./course;
 
       empty.description = "An empty flake to be used as a starting point for creating new templates.";
