@@ -25,8 +25,6 @@
     {
       packages.default = CHANGEME;
 
-      devShells.default = mkShell {
-        packages = [ ];
-      };
+      devShells.default = mkShell { inputsFrom = [ CHANGEME ]; };
     });
 }

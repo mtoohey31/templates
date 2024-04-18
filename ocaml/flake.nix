@@ -25,13 +25,14 @@
         inherit system;
       };
       inherit (pkgs) mkShell ocamlformat ocamlPackages;
-      inherit (ocamlPackages) CHANGEME dune_3 findlib ocaml ocaml-lsp;
+      inherit (ocamlPackages) CHANGEME findlib ocaml-lsp;
     in
     {
       packages.default = CHANGEME;
 
       devShells.default = mkShell {
-        packages = [ dune_3 findlib ocaml ocamlformat ocaml-lsp ];
+        inputsFrom = [ CHANGEME ];
+        packages = [ findlib ocamlformat ocaml-lsp ];
       };
     });
 }

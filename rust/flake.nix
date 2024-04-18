@@ -32,20 +32,15 @@
         overlays = [ self.overlays.default ];
         inherit system;
       };
-      inherit (pkgs) CHANGEME cargo cargo-watch mkShell rust-analyzer rustc
+      inherit (pkgs) CHANGEME mkShell rust-analyzer
         rustfmt;
     in
     {
       packages.default = CHANGEME;
 
       devShells.default = mkShell {
-        packages = [
-          cargo
-          cargo-watch
-          rust-analyzer
-          rustc
-          rustfmt
-        ];
+        inputsFrom = [ CHANGEME ];
+        packages = [ rust-analyzer rustfmt ];
       };
     });
 }

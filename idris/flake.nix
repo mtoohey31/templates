@@ -24,13 +24,11 @@
           overlays = [ self.overlays.default ];
           inherit system;
         };
-        inherit (pkgs) CHANGEME idris2 mkShell;
+        inherit (pkgs) CHANGEME mkShell;
       in
       {
         packages.default = CHANGEME;
 
-        devShells.default = mkShell {
-          packages = [ idris2 ];
-        };
+        devShells.default = mkShell { inputsFrom = [ CHANGEME ]; };
       });
 }
