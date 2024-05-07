@@ -13,10 +13,12 @@
   outputs = { self, nixpkgs, utils, naersk }: {
     overlays = rec {
       expects-naersk = final: _: {
-        CHANGEME = final.naersk.buildPackage {
-          pname = "CHANGEME";
-          root = builtins.path { path = ./.; name = "CHANGEME-src"; };
-        };
+        CHANGEME = final.callPackage
+          ({ naersk }: naersk.buildPackage {
+            pname = "CHANGEME";
+            root = builtins.path { path = ./.; name = "CHANGEME-src"; };
+          })
+          { };
       };
 
       default = _: prev: {

@@ -8,12 +8,14 @@
 
   outputs = { self, nixpkgs, utils }: {
     overlays.default = final: _: {
-      CHANGEME = final.buildGoModule {
-        pname = "CHANGEME";
-        version = "0.1.0";
-        src = builtins.path { path = ./.; name = "CHANGEME-src"; };
-        vendorHash = null;
-      };
+      CHANGEME = final.callPackage
+        ({ buildGoModule }: buildGoModule {
+          pname = "CHANGEME";
+          version = "0.1.0";
+          src = builtins.path { path = ./.; name = "CHANGEME-src"; };
+          vendorHash = null;
+        })
+        { };
     };
   } // utils.lib.eachDefaultSystem (system:
     let

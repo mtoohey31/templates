@@ -13,9 +13,11 @@
   outputs = { self, nixpkgs, utils, poetry2nix }: {
     overlays = rec {
       expects-poetry2nix = final: _: {
-        CHANGEME = final.poetry2nix.mkPoetryApplication {
-          projectDir = builtins.path { path = ./.; name = "CHANGEME-src"; };
-        };
+        CHANGEME = final.callPackage
+          ({ poetry2nix }: poetry2nix.mkPoetryApplication {
+            projectDir = builtins.path { path = ./.; name = "CHANGEME-src"; };
+          })
+          { };
       };
 
       default = _: prev: {

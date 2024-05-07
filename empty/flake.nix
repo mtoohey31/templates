@@ -8,11 +8,13 @@
 
   outputs = { self, nixpkgs, utils }: {
     overlays.default = final: _: {
-      CHANGEME = final.stdenv.mkDerivation {
-        pname = "CHANGEME";
-        version = "0.1.0";
-        src = builtins.path { path = ./.; name = "CHANGEME-src"; };
-      };
+      CHANGEME = final.callPackage
+        ({ stdenv }: stdenv.mkDerivation {
+          pname = "CHANGEME";
+          version = "0.1.0";
+          src = builtins.path { path = ./.; name = "CHANGEME-src"; };
+        })
+        { };
     };
   } // utils.lib.eachDefaultSystem (system:
     let
