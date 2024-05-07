@@ -1,4 +1,2 @@
-/flake.lock -diff
-
 /bindings/** linguist-generated=true
 /src/** linguist-generated=true

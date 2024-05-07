@@ -12,7 +12,7 @@
         CHANGEME = final.buildDunePackage {
           pname = "CHANGEME";
           version = "0.1.0";
-          src = builtins.path { path = ./.; name = "CHANGEME-src"; };
+          src = builtins.path { path = ./..; name = "CHANGEME-src"; };
           minimalOcamlVersion = "4.14.1";
           duneVersion = "3";
         };
@@ -25,14 +25,14 @@
         inherit system;
       };
       inherit (pkgs) mkShell ocamlformat ocamlPackages;
-      inherit (ocamlPackages) CHANGEME findlib ocaml-lsp;
+      inherit (ocamlPackages) CHANGEME ocaml-lsp;
     in
     {
       packages.default = CHANGEME;
 
       devShells.default = mkShell {
         inputsFrom = [ CHANGEME ];
-        packages = [ findlib ocamlformat ocaml-lsp ];
+        packages = [ ocamlformat ocaml-lsp ];
       };
     });
 }

@@ -15,7 +15,7 @@
       expects-poetry2nix = final: _: {
         CHANGEME = final.callPackage
           ({ poetry2nix }: poetry2nix.mkPoetryApplication {
-            projectDir = builtins.path { path = ./.; name = "CHANGEME-src"; };
+            projectDir = builtins.path { path = ./..; name = "CHANGEME-src"; };
           })
           { };
       };

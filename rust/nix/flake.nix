@@ -16,16 +16,14 @@
         CHANGEME = final.callPackage
           ({ naersk }: naersk.buildPackage {
             pname = "CHANGEME";
-            root = builtins.path { path = ./.; name = "CHANGEME-src"; };
+            root = builtins.path { path = ./..; name = "CHANGEME-src"; };
           })
           { };
       };
 
       default = _: prev: {
-        inherit (prev.appendOverlays [
-          naersk.overlay
-          expects-naersk
-        ]) CHANGEME;
+        inherit (prev.appendOverlays [ naersk.overlay expects-naersk ])
+          CHANGEME;
       };
     };
   } // utils.lib.eachDefaultSystem (system:
@@ -34,8 +32,7 @@
         overlays = [ self.overlays.default ];
         inherit system;
       };
-      inherit (pkgs) CHANGEME mkShell rust-analyzer
-        rustfmt;
+      inherit (pkgs) CHANGEME mkShell rust-analyzer rustfmt;
     in
     {
       packages.default = CHANGEME;

@@ -1,5 +1,5 @@
-/result
 /.direnv
+result
 
 /build/
 /Cargo.lock

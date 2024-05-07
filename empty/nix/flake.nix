@@ -12,7 +12,7 @@
         ({ stdenv }: stdenv.mkDerivation {
           pname = "CHANGEME";
           version = "0.1.0";
-          src = builtins.path { path = ./.; name = "CHANGEME-src"; };
+          src = builtins.path { path = ./..; name = "CHANGEME-src"; };
         })
         { };
     };
