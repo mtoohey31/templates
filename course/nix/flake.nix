@@ -1,4 +1,3 @@
-# cspell:disable
 {
   description = "CHANGEME";
 
@@ -31,7 +30,8 @@
           ];
           inherit system;
         };
-        inherit (pkgs) efm-langserver mkShell nodePackages typst typst-lsp;
+        inherit (pkgs) efm-langserver mkShell nodePackages tinymist typst
+          typstyle;
         inherit (nodePackages) cspell;
       in
       {
@@ -41,8 +41,9 @@
             efm-langserver
             pkgs.spaced
             pkgs.taskmatter
+            tinymist
             typst
-            typst-lsp
+            typstyle
           ];
         };
       });

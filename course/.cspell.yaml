@@ -2,3 +2,6 @@ version: 0.2
 language: "en-GB"
 words:
   - Toohey
+  - typst
+ignorePaths:
+  - nix/flake.nix

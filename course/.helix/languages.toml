@@ -6,9 +6,10 @@ lintCommand = "cspell --config .cspell.yaml lint stdin://${INPUT} --no-progress 
 lintStdin = true
 lintFormats = ["%f:%l:%c - %m"]
 
-[language-server.typst-lsp.config]
-experimentalFormatterMode = "on"
+[language-server.tinymist.config]
+exportPdf = "onSave"
+formatterMode = "typstyle"
 
 [[language]]
 name = "typst"
-language-servers = ["efm-langserver", "typst-lsp"]
+language-servers = ["efm-langserver", "tinymist"]
