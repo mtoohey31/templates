@@ -15,6 +15,9 @@
       idris.description = "A flake for Idris projects.";
       idris.path = ./idris;
 
+      lean.description = "A flake for Lean 4 projects.";
+      lean.path = ./lean;
+
       ocaml.description = "A flake for OCaml projects.";
       ocaml.path = ./ocaml;
 
