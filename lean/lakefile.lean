@@ -6,5 +6,5 @@ package CHANGEME
 lean_lib CHANGEME
 
 @[default_target]
-lean_exe «changeme» where
+lean_exe changeme where
   root := `Main
