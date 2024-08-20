@@ -4,13 +4,6 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
     utils.url = "github:numtide/flake-utils";
-    spaced = {
-      url = "github:mtoohey31/spaced";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
-    };
     taskmatter = {
       url = "github:mtoohey31/taskmatter";
       inputs = {
@@ -20,14 +13,11 @@
     };
   };
 
-  outputs = { nixpkgs, utils, spaced, taskmatter, ... }:
+  outputs = { nixpkgs, utils, taskmatter, ... }:
     utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
-          overlays = [
-            spaced.overlays.default
-            taskmatter.overlays.default
-          ];
+          overlays = [ taskmatter.overlays.default ];
           inherit system;
         };
         inherit (pkgs) efm-langserver mkShell nodePackages tinymist typst
@@ -39,7 +29,6 @@
           packages = [
             cspell
             efm-langserver
-            pkgs.spaced
             pkgs.taskmatter
             tinymist
             typst
