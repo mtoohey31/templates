@@ -34,9 +34,9 @@ test:
 .PHONY: update
 update:
 	for flake in $(TPLS); do \
-	  nix $(NIX_FLAGS) flake update "git+file://$$PWD?dir=$${flake}/nix" ;\
+	  nix $(NIX_FLAGS) flake update --flake "git+file://$$PWD?dir=$${flake}/nix" ;\
 	done
-	nix $(NIX_FLAGS) flake update "git+file://$$PWD?dir=nix"
+	nix $(NIX_FLAGS) flake update --flake "git+file://$$PWD?dir=nix"
 
 .PHONY: clean
 clean:
