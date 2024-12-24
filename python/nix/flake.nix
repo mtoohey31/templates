@@ -3,14 +3,14 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
-    utils.url = "github:numtide/flake-utils";
+    flake-utils.url = "github:numtide/flake-utils";
     poetry2nix = {
       url = "github:nix-community/poetry2nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, utils, poetry2nix }: {
+  outputs = { self, nixpkgs, flake-utils, poetry2nix }: {
     overlays = rec {
       expects-poetry2nix = final: _: {
         CHANGEME = final.callPackage
@@ -27,7 +27,7 @@
         ]) CHANGEME;
       };
     };
-  } // utils.lib.eachDefaultSystem (system:
+  } // flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs {
         overlays = [ self.overlays.default ];

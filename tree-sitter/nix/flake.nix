@@ -3,10 +3,10 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
-    utils.url = "github:numtide/flake-utils";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, utils }: {
+  outputs = { self, nixpkgs, flake-utils }: {
     overlays.default = _: prev: {
       tree-sitter = prev.tree-sitter.override {
         extraGrammars.tree-sitter-CHANGEME = {
@@ -16,7 +16,7 @@
         };
       };
     };
-  } // utils.lib.eachDefaultSystem (system:
+  } // flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs {
         overlays = [ self.overlays.default ];

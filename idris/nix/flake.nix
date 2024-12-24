@@ -3,10 +3,10 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
-    utils.url = "github:numtide/flake-utils";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, utils }: {
+  outputs = { self, nixpkgs, flake-utils }: {
     overlays.default = final: _: {
       CHANGEME = final.callPackage
         ({ idris2, stdenvNoCC }: stdenvNoCC.mkDerivation {
@@ -19,7 +19,7 @@
         })
         { };
     };
-  } // utils.lib.eachSystem [ "x86_64-linux" "x86_64-darwin" ]
+  } // flake-utils.lib.eachSystem [ "x86_64-linux" "x86_64-darwin" ]
     (system:
       let
         pkgs = import nixpkgs {
