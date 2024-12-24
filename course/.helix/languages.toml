@@ -13,7 +13,6 @@ lintFormats = ["%f:%l:%c - %m"]
 
 [language-server.tinymist.config]
 exportPdf = "onSave"
-formatterMode = "typstyle"
 
 [[language]]
 name = "markdown"
@@ -21,4 +20,5 @@ language-servers = ["efm-langserver"]
 
 [[language]]
 name = "typst"
+formatter.command = "typstyle"
 language-servers = ["efm-langserver", "tinymist"]
