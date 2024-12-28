@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-set -eou pipefail
-shopt -s globstar nullglob
-
-cspell --config .cspell.yaml lint --no-progress --no-summary .
-typstyle --check **/*.typ /dev/null > /dev/null

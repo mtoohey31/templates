@@ -4,4 +4,5 @@ words:
   - Toohey
   - typst
 ignorePaths:
+  - .gitignore
   - nix/flake.nix
