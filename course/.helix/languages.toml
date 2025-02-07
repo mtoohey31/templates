@@ -12,7 +12,7 @@ lintStdin = true
 lintFormats = ["%f:%l:%c - %m"]
 
 [language-server.tinymist.config]
-exportPdf = "onSave"
+exportPdf = "onType"
 
 [[language]]
 name = "markdown"
