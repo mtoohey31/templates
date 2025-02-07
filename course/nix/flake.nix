@@ -34,7 +34,9 @@
           hooks = {
             cspell = {
               enable = true;
-              args = [ "--config" (toString ../.cspell.yaml) ];
+              args = [ "--config" (toString ../.cspell.yaml) "lint" "." ];
+              always_run = true;
+              pass_filenames = false;
             };
             typstyle.enable = true;
           };
