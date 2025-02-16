@@ -30,6 +30,9 @@
       tree-sitter.description = "A flake for tree-sitter grammars.";
       tree-sitter.path = ./tree-sitter;
 
+      zig.description = "A flake for Zig projects.";
+      zig.path = ./zig;
+
       default = empty;
     };
   };
