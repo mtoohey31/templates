@@ -22,7 +22,7 @@
       };
 
       default = _: prev: {
-        inherit (prev.appendOverlays [ naersk.overlay expects-naersk ])
+        inherit (prev.appendOverlays [ naersk.overlays.default expects-naersk ])
           CHANGEME;
       };
     };

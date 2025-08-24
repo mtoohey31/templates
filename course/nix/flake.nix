@@ -9,10 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     taskmatter = {
-      url = "github:mtoohey31/taskmatter";
+      url = "github:mtoohey31/taskmatter?dir=nix";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        utils.follows = "flake-utils";
+        flake-utils.follows = "flake-utils";
       };
     };
   };
@@ -24,8 +24,8 @@
           overlays = [ taskmatter.overlays.default ];
           inherit system;
         };
-        inherit (pkgs) efm-langserver mkShell nodePackages tinymist typst
-          typstyle;
+        inherit (pkgs) efm-langserver mkShell nodePackages
+          taskmatter-bin-wrapped tinymist typst typstyle;
         inherit (nodePackages) cspell;
       in
       rec {
@@ -47,7 +47,7 @@
           packages = [
             cspell
             efm-langserver
-            pkgs.taskmatter
+            taskmatter-bin-wrapped
             tinymist
             typst
             typstyle
