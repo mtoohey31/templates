@@ -34,7 +34,7 @@
           hooks = {
             cspell = {
               enable = true;
-              args = [ "--config" (toString ../.cspell.yaml) "lint" "." ];
+              args = [ "--config" ".cspell.yaml" "lint" "." ];
               always_run = true;
               pass_filenames = false;
             };
